@@ -38,24 +38,32 @@
 			</section>
 			<!-- The main flashcard section. Clicking flips between front and back. -->
 			<section id="flashcard">
-				<label for="flip-card-checkbox" id="card-inner">
+				<div id="card-inner">
 					<!-- STUDENTS: Start of recommended modifications -->
 					<!-- Add and rearrange HTML elements inside .card-front and .card-back below. -->
 					<div class="card card-front">
-						<h2 id="front-word"></h2>
-					</div>
+						<!--This is the Today's Menu div-->
+						<div id="top_menu">
+							<button id="TmenuButton">
+								<h2>Today's Menu</h2>						
+							</button>						
+							<button id="magnifier">Magnifier</button>
+						</div>
+						<div id="Tmenu">
+								<h1>this is the menu</h1>
+								<ul id="TmenuList"></ul>
+						</div>			
+					</div>					
+	
 					<div class="card card-back">
 						<p>
 							<span id="back-pos"></span>
 							<span id="back-definition"></span>
 						</p>
 						<img id="back-image" />
-						<audio id="back-audio" controls></audio>
-						<video id="back-video" controls autoplay loop muted></video>
-						<!-- Remove the above attributes as needed. -->
 					</div>
 					<!-- STUDENTS: End of recommended modifications -->
-				</label>
+				</div>
 			</section>
 			<!-- Navigation and learning progress buttons for the current flashcard. -->
 			<div id="actions">

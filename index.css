@@ -298,3 +298,41 @@ button:hover {
 #btn-easy {
 	background-color: #ccccff;
 }
+
+/*add*/
+#top_menu {
+	position: absolute;
+	top:2%;
+	left: 5%;
+	background-color: #e8ffc3;
+	width:50%;
+	text-align: left;
+}
+
+#Tmenu {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10%;
+    margin-top: 10px;
+	height: 1000px;
+	width:85%;
+	position: absolute;
+	align-items: center;
+	z-index: 99;
+	background-color: #6ab0ff;	
+	justify-content: center; 
+	
+}
+
+#TmenuButton {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#TmenuButton:hover {
+    background-color: #45a049;
+}
+
