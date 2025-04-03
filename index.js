@@ -194,13 +194,13 @@ initEntries();
 renderCard();
 
 // today's menu
-const TmenuButton = document.getElementById('TmenuButton');
-const Tmenu = document.getElementById('Tmenu');
+const TmenuButton = document.getElementById("TmenuButton");
+const Tmenu = document.getElementById("Tmenu");
 
-TmenuButton.addEventListener('click', () => {
-    if (Tmenu.style.display === 'none') {
-        Tmenu.style.display = 'block'; // 顯示選單
+TmenuButton.addEventListener("click", () => {
+    if (Tmenu.style.display === "none" || Tmenu.style.display === "") {
+		Tmenu.style.display = "block"; // 顯示選單
     } else {
-        Tmenu.style.display = 'none'; // 隱藏選單
+        Tmenu.style.display = "none"; // 隱藏選單
     }
 });
