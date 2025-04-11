@@ -89,6 +89,7 @@ main {
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	display: none;
+	place-items: center;
 	opacity: 0;
 	transition: display 0.3s allow-discrete, opacity 0.3s;
 	z-index: 1;
@@ -143,8 +144,11 @@ main {
 	Clicking #toggle-entries changes the state of #toggle-entries-checkbox.
 	When #toggle-entries-checkbox is checked, this ruleset is in effect, and the #entries table becomes visible.
 	Otherwise, the previous rules (display: none; opacity: 0;) inside the #entries ruleset remain effective, and the table is hidden. */
-#toggle-entries-checkbox:checked ~ main #entries {
-	display: block;
+
+
+/* Ensure #magnifier-checkbox controls the visibility of #entries */
+#magnifier-checkbox:checked ~ main #entries {
+	display: grid;
 	opacity: 1;
 	@starting-style {
 		opacity: 0;
@@ -299,29 +303,50 @@ button:hover {
 	background-color: #ccccff;
 }
 
-/*add*/
-#top_menu {
-	position: absolute;
-	top:2%;
-	left: 5%;
-	background-color: #e8ffc3;
-	width:50%;
-	text-align: left;
+/* Style #Tmenu similar to #entries */
+#Tmenu {
+	position: relative;
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: none;
+	place-items: center;
+	opacity: 0;
+	transition: display 0.3s allow-discrete, opacity 0.3s;
+	z-index: 1;
+	border-radius: 1rem;
 }
 
-#Tmenu {
-    display: none;
-    border: 1px solid #ccc;
-    padding: 10%;
-    margin-top: 10px;
-	height: 1000px;
-	width:85%;
-	position: absolute;
-	align-items: center;
-	z-index: 99;
-	background-color: #6ab0ff;	
-	justify-content: center; 
-	
+#Tmenu ul {
+	list-style: none;
+	padding: 1rem;
+}
+
+#Tmenu li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #ddd;
+}
+
+#Tmenu li:last-child {
+	border-bottom: none;
+}
+
+/* Make #Tmenu-checkbox control the visibility of #Tmenu */
+#Tmenu-checkbox:checked ~ main #Tmenu {
+	display: grid;
+	opacity: 1;
+	@starting-style {
+		opacity: 0;
+	}
+}
+
+#Tmenu-inner {
+	background-color: #f9f9f9;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #TmenuButton {
@@ -336,3 +361,6 @@ button:hover {
     background-color: #45a049;
 }
 
+#magnifierButton {
+	float:right;
+}

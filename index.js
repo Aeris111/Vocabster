@@ -1,4 +1,4 @@
-import example from "./data/example.json" with { type: "json" };
+import data from "./data/vocabster_data.json" with { type: "json" };
 
 /** Loads flashcard progress from local storage if available. */
 function loadProgress() {
@@ -13,7 +13,7 @@ function saveProgress(progress) {
 
 // Sorts the flashcards by their due date to prioritise learning.
 const progressData = loadProgress();
-const cards = example
+const cards = data
 	.sort((a, b) => {
 		// Put cards without a dueDate at the last
 		const dateA = progressData[a.id]?.dueDate ? new Date(progressData[a.id].dueDate) : Infinity;
@@ -101,37 +101,9 @@ function renderCard() {
 
 	// Update the front side with the current card's word
 	const currentCard = cards[currentIndex];
-	frontWord.textContent = currentCard.word;
+	// frontWord.textContent = currentCard.word;
 
-	// Reset flashcard to the front side
-	flipCardCheckbox.checked = false;
-
-	// Wait for the back side to become invisible before updating the content
-	setTimeout(() => {
-		backPos.textContent = posMapping[currentCard.pos] || currentCard.pos;
-		backDefinition.textContent = currentCard.definition;
-
-		if (currentCard.image) {
-			backImage.src = currentCard.image;
-			backImage.style.display = "block";
-		} else {
-			backImage.style.display = "none";
-		}
-
-		if (currentCard.audio) {
-			backAudio.src = currentCard.audio;
-			backAudio.style.display = "block";
-		} else {
-			backAudio.style.display = "none";
-		}
-
-		if (currentCard.video) {
-			backVideo.src = currentCard.video;
-			backVideo.style.display = "block";
-		} else {
-			backVideo.style.display = "none";
-		}
-	}, transitionHalfDuration);
+	
 	// STUDENTS: End of recommended modifications
 
 	updateEntries();
@@ -193,14 +165,3 @@ document.getElementById("btn-easy").addEventListener("click", () => {
 initEntries();
 renderCard();
 
-// today's menu
-const TmenuButton = document.getElementById("TmenuButton");
-const Tmenu = document.getElementById("Tmenu");
-
-TmenuButton.addEventListener("click", () => {
-    if (Tmenu.style.display === "none" || Tmenu.style.display === "") {
-		Tmenu.style.display = "block"; // 顯示選單
-    } else {
-        Tmenu.style.display = "none"; // 隱藏選單
-    }
-});

@@ -13,14 +13,21 @@
 	</head>
 	<body>
 		<!-- These hidden checkboxes store the toggling state of the entries panel and the flashcard. Don't remove them. -->
-		<input type="checkbox" id="toggle-entries-checkbox" hidden />
-		<input type="checkbox" id="flip-card-checkbox" hidden />
+		<input type="checkbox" id="Tmenu-checkbox" hidden />
+		<input type="checkbox" id="magnifier-checkbox" hidden />
 		<main>
 			<!-- The header includes a button to show/hide all flashcard entries. -->
 			<h1 id="header">
-				<label for="toggle-entries-checkbox" id="toggle-entries" title="Show All Entries">|||</label>
+				<label for="Tmenu-checkbox" id="TmenuButton" title="today's menu">📖</label>
+				<label for="magnifier-checkbox" id="magnifierButton" title="Show All Entries">🔎</label>
 				SOS
 			</h1>
+			<section id="Tmenu">
+				<div id="Tmenu-inner">
+					<h1>this is the menu</h1>
+					<ul id="TmenuList"></ul>
+				</div>
+			</section>		
 			<!-- This section displays a table of all cards for quick access. -->
 			<section id="entries">
 				<div id="entries-inner">
@@ -43,14 +50,8 @@
 					<!-- Add and rearrange HTML elements inside .card-front and .card-back below. -->
 					<div class="card card-front">
 						<!--This is the Today's Menu div-->
-						<div id="top_menu">
-							<button id="TmenuButton">Today's Menu</button>						
-							<button id="magnifier">Magnifier</button>
-						</div>
-						<div id="Tmenu">
-								<h1>this is the menu</h1>
-								<ul id="TmenuList"></ul>
-						</div>			
+					
+							
 					</div>					
 	
 					<div class="card card-back">

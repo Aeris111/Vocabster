@@ -1,0 +1,2508 @@
+[
+  {
+    "id": "1",
+    "word": "Dog",
+    "word_zh": "狗",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "2",
+    "word": "Cat",
+    "word_zh": "貓",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "3",
+    "word": "Bird",
+    "word_zh": "鳥",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "4",
+    "word": "Fish",
+    "word_zh": "魚",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "5",
+    "word": "Elephant",
+    "word_zh": "大象",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "6",
+    "word": "Lion",
+    "word_zh": "獅子",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "7",
+    "word": "Tiger",
+    "word_zh": "老虎",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "8",
+    "word": "Bear",
+    "word_zh": "熊",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "9",
+    "word": "Monkey",
+    "word_zh": "猴子",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "10",
+    "word": "Giraffe",
+    "word_zh": "長頸鹿",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "11",
+    "word": "Zebra",
+    "word_zh": "斑馬",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "12",
+    "word": "Kangaroo",
+    "word_zh": "袋鼠",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "13",
+    "word": "Rabbit",
+    "word_zh": "兔子",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "14",
+    "word": "Mouse",
+    "word_zh": "老鼠",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "15",
+    "word": "Squirrel",
+    "word_zh": "松鼠",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "16",
+    "word": "Fox",
+    "word_zh": "狐狸",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "17",
+    "word": "Wolf",
+    "word_zh": "狼",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "18",
+    "word": "Shark",
+    "word_zh": "鯊魚",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "19",
+    "word": "Dolphin",
+    "word_zh": "海豚",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "20",
+    "word": "Whale",
+    "word_zh": "鯨魚",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "21",
+    "word": "Octopus",
+    "word_zh": "章魚",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "22",
+    "word": "Crab",
+    "word_zh": "螃蟹",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "23",
+    "word": "Butterfly",
+    "word_zh": "蝴蝶",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "24",
+    "word": "Ant",
+    "word_zh": "螞蟻",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "25",
+    "word": "Bee",
+    "word_zh": "蜜蜂",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "26",
+    "word": "Spider",
+    "word_zh": "蜘蛛",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "27",
+    "word": "Snail",
+    "word_zh": "蝸牛",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "28",
+    "word": "Tortoise",
+    "word_zh": "龜",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "29",
+    "word": "Parrot",
+    "word_zh": "鸚鵡",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "30",
+    "word": "Chicken",
+    "word_zh": "雞",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "31",
+    "word": "Duck",
+    "word_zh": "鴨",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "32",
+    "word": "Goose",
+    "word_zh": "鵝",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "33",
+    "word": "Peafowl",
+    "word_zh": "孔雀",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "34",
+    "word": "Hamster",
+    "word_zh": "倉鼠",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "35",
+    "word": "Guinea Pig",
+    "word_zh": "豚鼠",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "36",
+    "word": "Ferret",
+    "word_zh": "雪貂",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "37",
+    "word": "Lizard",
+    "word_zh": "蜥蜴",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "38",
+    "word": "Snake",
+    "word_zh": "蛇",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "39",
+    "word": "Hedgehog",
+    "word_zh": "刺蝟",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "40",
+    "word": "Bat",
+    "word_zh": "蝙蝠",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "41",
+    "word": "Cheetah",
+    "word_zh": "獵豹",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "42",
+    "word": "Rhino",
+    "word_zh": "犀牛",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "43",
+    "word": "Hippopotamus",
+    "word_zh": "河馬",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "44",
+    "word": "Antelope",
+    "word_zh": "羚羊",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "45",
+    "word": "Bison",
+    "word_zh": "野牛",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "46",
+    "word": "Elk",
+    "word_zh": "麋鹿",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "47",
+    "word": "Flamingo",
+    "word_zh": "火烈鳥",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "48",
+    "word": "Ostrich",
+    "word_zh": "鴕鳥",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "49",
+    "word": "Raccoon",
+    "word_zh": "浣熊",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "50",
+    "word": "Sloth",
+    "word_zh": "樹懶",
+    "category": "Animals",
+    "category_zh": "動物"
+  },
+  {
+    "id": "51",
+    "word": "Towel",
+    "word_zh": "毛巾",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "52",
+    "word": "Shampoo",
+    "word_zh": "洗髮水",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "53",
+    "word": "Soap",
+    "word_zh": "肥皂",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "54",
+    "word": "Body Wash",
+    "word_zh": "沐浴乳",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "55",
+    "word": "Toothbrush",
+    "word_zh": "牙刷",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "56",
+    "word": "Toothpaste",
+    "word_zh": "牙膏",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "57",
+    "word": "Razor",
+    "word_zh": "剃鬚刀",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "58",
+    "word": "Loofah",
+    "word_zh": "浴球",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "59",
+    "word": "Bath Mat",
+    "word_zh": "浴室垫",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "60",
+    "word": "Shower Curtain",
+    "word_zh": "浴簾",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "61",
+    "word": "Bathrobe",
+    "word_zh": "浴袍",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "62",
+    "word": "Hairdryer",
+    "word_zh": "吹風機",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "63",
+    "word": "Comb",
+    "word_zh": "梳子",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "64",
+    "word": "Mirror",
+    "word_zh": "鏡子",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "65",
+    "word": "Toilet",
+    "word_zh": "馬桶",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "66",
+    "word": "Toilet Paper",
+    "word_zh": "廁所紙",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "67",
+    "word": "Plunger",
+    "word_zh": "馬桶吸",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "68",
+    "word": "Trash Can",
+    "word_zh": "垃圾桶",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "69",
+    "word": "Hand Soap",
+    "word_zh": "手部肥皂",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "70",
+    "word": "Cotton Balls",
+    "word_zh": "棉花球",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "71",
+    "word": "Q-tips",
+    "word_zh": "棉簽",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "72",
+    "word": "Bath Sponge",
+    "word_zh": "浴海綿",
+    "category": "Bathroom",
+    "category_zh": "浴室"
+  },
+  {
+    "id": "73",
+    "word": "Apple",
+    "word_zh": "蘋果",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "74",
+    "word": "Banana",
+    "word_zh": "香蕉",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "75",
+    "word": "Orange",
+    "word_zh": "橘子",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "76",
+    "word": "Grapes",
+    "word_zh": "葡萄",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "77",
+    "word": "Strawberry",
+    "word_zh": "草莓",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "78",
+    "word": "Blueberry",
+    "word_zh": "藍莓",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "79",
+    "word": "Pineapple",
+    "word_zh": "鳳梨",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "80",
+    "word": "Mango",
+    "word_zh": "芒果",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "81",
+    "word": "Peach",
+    "word_zh": "桃子",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "82",
+    "word": "Watermelon",
+    "word_zh": "西瓜",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "83",
+    "word": "Lemon",
+    "word_zh": "檸檬",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "84",
+    "word": "Lime",
+    "word_zh": "青檸",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "85",
+    "word": "Cherry",
+    "word_zh": "櫻桃",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "86",
+    "word": "Kiwi",
+    "word_zh": "奇異果",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "87",
+    "word": "Papaya",
+    "word_zh": "木瓜",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "88",
+    "word": "Avocado",
+    "word_zh": "酪梨",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "89",
+    "word": "Coconut",
+    "word_zh": "椰子",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "90",
+    "word": "Tomato",
+    "word_zh": "番茄",
+    "category": "Fruit",
+    "category_zh": "水果"
+  },
+  {
+    "id": "91",
+    "word": "Carrot",
+    "word_zh": "胡蘿蔔",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "92",
+    "word": "Potato",
+    "word_zh": "馬鈴薯",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "93",
+    "word": "Onion",
+    "word_zh": "洋蔥",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "94",
+    "word": "Garlic",
+    "word_zh": "大蒜",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "95",
+    "word": "Cucumber",
+    "word_zh": "黃瓜",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "96",
+    "word": "Bell Pepper",
+    "word_zh": "甜椒",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "97",
+    "word": "Lettuce",
+    "word_zh": "生菜",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "98",
+    "word": "Spinach",
+    "word_zh": "菠菜",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "99",
+    "word": "Broccoli",
+    "word_zh": "花椰菜",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "100",
+    "word": "Cauliflower",
+    "word_zh": "菜花",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "101",
+    "word": "Eggplant",
+    "word_zh": "茄子",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "102",
+    "word": "Zucchini",
+    "word_zh": "櫛瓜",
+    "category": "Vegetable",
+    "category_zh": "蔬菜"
+  },
+  {
+    "id": "103",
+    "word": "Rice",
+    "word_zh": "米飯",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "104",
+    "word": "Pasta",
+    "word_zh": "義大利麵",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "105",
+    "word": "Bread",
+    "word_zh": "麵包",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "106",
+    "word": "Cheese",
+    "word_zh": "起司",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "107",
+    "word": "Butter",
+    "word_zh": "奶油",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "108",
+    "word": "Yogurt",
+    "word_zh": "優格",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "109",
+    "word": "Milk",
+    "word_zh": "牛奶",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "110",
+    "word": "Egg",
+    "word_zh": "雞蛋",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "111",
+    "word": "Chicken",
+    "word_zh": "雞肉",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "112",
+    "word": "Beef",
+    "word_zh": "牛肉",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "113",
+    "word": "Pork",
+    "word_zh": "豬肉",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "114",
+    "word": "Fish",
+    "word_zh": "魚",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "115",
+    "word": "Shrimp",
+    "word_zh": "蝦",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "116",
+    "word": "Nuts",
+    "word_zh": "堅果",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "117",
+    "word": "Chocolate",
+    "word_zh": "巧克力",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "118",
+    "word": "Ice Cream",
+    "word_zh": "冰淇淋",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "119",
+    "word": "Cookies",
+    "word_zh": "餅乾",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "120",
+    "word": "Cake",
+    "word_zh": "蛋糕",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "121",
+    "word": "Pie",
+    "word_zh": "派",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "122",
+    "word": "Candy",
+    "word_zh": "糖果",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "123",
+    "word": "Popcorn",
+    "word_zh": "爆米花",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "124",
+    "word": "Chips",
+    "word_zh": "薯片",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "125",
+    "word": "Granola",
+    "word_zh": "燕麥片",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "126",
+    "word": "Cereal",
+    "word_zh": "穀物",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "127",
+    "word": "Honey",
+    "word_zh": "蜂蜜",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "128",
+    "word": "Jam",
+    "word_zh": "果醬",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "129",
+    "word": "Hot Dog",
+    "word_zh": "熱狗",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "130",
+    "word": "Hamburger",
+    "word_zh": "漢堡",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "131",
+    "word": "Sandwich",
+    "word_zh": "三明治",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "132",
+    "word": "Taco",
+    "word_zh": "塔可",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "133",
+    "word": "Pizza",
+    "word_zh": "披薩",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "134",
+    "word": "Fried Rice",
+    "word_zh": "炒飯",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "135",
+    "word": "Noodles",
+    "word_zh": "麵條",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "136",
+    "word": "Sushi",
+    "word_zh": "壽司",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "137",
+    "word": "Salad",
+    "word_zh": "沙拉",
+    "category": "Food",
+    "category_zh": "食物"
+  },
+  {
+    "id": "138",
+    "word": "Pudding",
+    "word_zh": "布丁",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "139",
+    "word": "Jelly",
+    "word_zh": "果凍",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "140",
+    "word": "Muffin",
+    "word_zh": "鬆餅",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "141",
+    "word": "Bagel",
+    "word_zh": "貝果",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "142",
+    "word": "Lollipop",
+    "word_zh": "棒棒糖",
+    "category": "Dessert",
+    "category_zh": "甜點"
+  },
+  {
+    "id": "143",
+    "word": "Car",
+    "word_zh": "汽車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "144",
+    "word": "Bus",
+    "word_zh": "公車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "145",
+    "word": "Bicycle",
+    "word_zh": "自行車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "146",
+    "word": "Train",
+    "word_zh": "火車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "147",
+    "word": "Subway",
+    "word_zh": "地鐵",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "148",
+    "word": "Tram",
+    "word_zh": "電車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "149",
+    "word": "Airplane",
+    "word_zh": "飛機",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "150",
+    "word": "Helicopter",
+    "word_zh": "直升機",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "151",
+    "word": "Boat",
+    "word_zh": "船",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "152",
+    "word": "Ferry",
+    "word_zh": "渡輪",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "153",
+    "word": "Taxi",
+    "word_zh": "計程車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "154",
+    "word": "Truck",
+    "word_zh": "貨車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "155",
+    "word": "Skateboard",
+    "word_zh": "滑板",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "156",
+    "word": "Hot Air Balloon",
+    "word_zh": "熱氣球",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "157",
+    "word": "Submarine",
+    "word_zh": "潛艇",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "158",
+    "word": "Yacht",
+    "word_zh": "遊艇",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "159",
+    "word": "Trolley",
+    "word_zh": "電車",
+    "category": "Transportation",
+    "category_zh": "交通工具"
+  },
+  {
+    "id": "160",
+    "word": "Pencil",
+    "word_zh": "鉛筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "161",
+    "word": "Pen",
+    "word_zh": "原子筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "162",
+    "word": "Eraser",
+    "word_zh": "橡皮擦",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "163",
+    "word": "Notebook",
+    "word_zh": "筆記本",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "164",
+    "word": "Paper",
+    "word_zh": "紙",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "165",
+    "word": "Binder",
+    "word_zh": "夾子",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "166",
+    "word": "Folder",
+    "word_zh": "文件夾",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "167",
+    "word": "Ruler",
+    "word_zh": "尺",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "168",
+    "word": "Scissors",
+    "word_zh": "剪刀",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "169",
+    "word": "Glue",
+    "word_zh": "膠水",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "170",
+    "word": "Tape",
+    "word_zh": "膠帶",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "171",
+    "word": "Crayons",
+    "word_zh": "蠟筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "172",
+    "word": "Markers",
+    "word_zh": "馬克筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "173",
+    "word": "Colored Pencils",
+    "word_zh": "彩色鉛筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "174",
+    "word": "Sharpener",
+    "word_zh": "削鉛筆機",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "175",
+    "word": "Chalk",
+    "word_zh": "粉筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "176",
+    "word": "Whiteboard",
+    "word_zh": "白板",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "177",
+    "word": "Chalkboard",
+    "word_zh": "黑板",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "178",
+    "word": "Desk",
+    "word_zh": "桌子",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "179",
+    "word": "Chair",
+    "word_zh": "椅子",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "180",
+    "word": "Backpack",
+    "word_zh": "背包",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "181",
+    "word": "Lunchbox",
+    "word_zh": "午餐盒",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "182",
+    "word": "Water Bottle",
+    "word_zh": "水壺",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "183",
+    "word": "Name Tag",
+    "word_zh": "名牌",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "184",
+    "word": "Sticky Notes",
+    "word_zh": "便利貼",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "185",
+    "word": "Clipboard",
+    "word_zh": "夾板",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "186",
+    "word": "Calculator",
+    "word_zh": "計算機",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "187",
+    "word": "Pencil Case",
+    "word_zh": "鉛筆盒",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "188",
+    "word": "Index Cards",
+    "word_zh": "索引卡",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "189",
+    "word": "Sticky Tack",
+    "word_zh": "黏土",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "190",
+    "word": "Stapler",
+    "word_zh": "釘書機",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "191",
+    "word": "Rubber Band",
+    "word_zh": "橡皮筋",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "192",
+    "word": "Pin",
+    "word_zh": "大頭針",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "193",
+    "word": "Globe",
+    "word_zh": "地球儀",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "194",
+    "word": "Map",
+    "word_zh": "地圖",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "195",
+    "word": "Book",
+    "word_zh": "書本",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "196",
+    "word": "Textbook",
+    "word_zh": "教科書",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "197",
+    "word": "Workbook",
+    "word_zh": "練習本",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "198",
+    "word": "Handout",
+    "word_zh": "講義",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "199",
+    "word": "Pencil Sharpener",
+    "word_zh": "鉛筆刀",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "200",
+    "word": "Notebook Divider",
+    "word_zh": "分隔頁",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "201",
+    "word": "Art Supplies",
+    "word_zh": "美術用品",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "202",
+    "word": "Paint",
+    "word_zh": "顏料",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "203",
+    "word": "Brush",
+    "word_zh": "畫筆",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "204",
+    "word": "Canvas",
+    "word_zh": "畫布",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "205",
+    "word": "Watercolor",
+    "word_zh": "水彩",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "206",
+    "word": "Craft Paper",
+    "word_zh": "手工紙",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "207",
+    "word": "Origami Paper",
+    "word_zh": "摺紙",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "208",
+    "word": "Masking Tape",
+    "word_zh": "美工膠帶",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "209",
+    "word": "Whiteout",
+    "word_zh": "修正液",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "210",
+    "word": "Postcard",
+    "word_zh": "明信片",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "211",
+    "word": "Envelope",
+    "word_zh": "信封",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "212",
+    "word": "Letter Opener",
+    "word_zh": "開信刀",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "213",
+    "word": "Paper Clips",
+    "word_zh": "紙夾",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "214",
+    "word": "Binder Clips",
+    "word_zh": "夾子",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "215",
+    "word": "Thumbtacks",
+    "word_zh": "圖釘",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "216",
+    "word": "Safety Scissors",
+    "word_zh": "安全剪刀",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "217",
+    "word": "Tape Measure",
+    "word_zh": "捲尺",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "218",
+    "word": "Stickers",
+    "word_zh": "貼紙",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "219",
+    "word": "Pencil Grip",
+    "word_zh": "握筆器",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "220",
+    "word": "Homework Folder",
+    "word_zh": "作業夾",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "221",
+    "word": "Glitter",
+    "word_zh": "亮片",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "222",
+    "word": "Play Dough",
+    "word_zh": "橡皮泥",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "223",
+    "word": "Scotch Tape",
+    "word_zh": "透明膠帶",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "224",
+    "word": "Craft Scissors",
+    "word_zh": "手工剪刀",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "225",
+    "word": "Pencil Holder",
+    "word_zh": "鉛筆筒",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "226",
+    "word": "Sponge",
+    "word_zh": "海綿",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "227",
+    "word": "Sketchbook",
+    "word_zh": "素描本",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "228",
+    "word": "Magnet",
+    "word_zh": "磁鐵",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "229",
+    "word": "Chalk Holder",
+    "word_zh": "粉筆盒",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "230",
+    "word": "Keychain",
+    "word_zh": "鑰匙圈",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "231",
+    "word": "Nail File",
+    "word_zh": "指甲銼",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "232",
+    "word": "Mirror",
+    "word_zh": "鏡子",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "233",
+    "word": "Toothbrush",
+    "word_zh": "牙刷",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "234",
+    "word": "Toothpaste",
+    "word_zh": "牙膏",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "235",
+    "word": "Comb",
+    "word_zh": "梳子",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "236",
+    "word": "Hairbrush",
+    "word_zh": "髮刷",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "237",
+    "word": "Soap",
+    "word_zh": "肥皂",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "238",
+    "word": "Tissue",
+    "word_zh": "紙巾",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "239",
+    "word": "Hand Sanitizer",
+    "word_zh": "洗手液",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "240",
+    "word": "First Aid Kit",
+    "word_zh": "急救箱",
+    "category": "Everyday Items",
+    "category_zh": "日常用品"
+  },
+  {
+    "id": "241",
+    "word": "Tree",
+    "word_zh": "樹",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "242",
+    "word": "Flower",
+    "word_zh": "花",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "243",
+    "word": "Grass",
+    "word_zh": "草",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "244",
+    "word": "Leaf",
+    "word_zh": "葉子",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "245",
+    "word": "Rock",
+    "word_zh": "石頭",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "246",
+    "word": "Stone",
+    "word_zh": "小石",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "247",
+    "word": "Soil",
+    "word_zh": "土壤",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "248",
+    "word": "Sand",
+    "word_zh": "沙子",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "249",
+    "word": "Water",
+    "word_zh": "水",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "250",
+    "word": "River",
+    "word_zh": "河",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "251",
+    "word": "Lake",
+    "word_zh": "湖",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "252",
+    "word": "Ocean",
+    "word_zh": "海洋",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "253",
+    "word": "Mountain",
+    "word_zh": "山",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "254",
+    "word": "Sky",
+    "word_zh": "天空",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "255",
+    "word": "Cloud",
+    "word_zh": "雲",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "256",
+    "word": "Sun",
+    "word_zh": "太陽",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "257",
+    "word": "Moon",
+    "word_zh": "月亮",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "258",
+    "word": "Star",
+    "word_zh": "星星",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "259",
+    "word": "Wind",
+    "word_zh": "風",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "260",
+    "word": "Rain",
+    "word_zh": "雨",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "261",
+    "word": "Snow",
+    "word_zh": "雪",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "262",
+    "word": "Rainbow",
+    "word_zh": "彩虹",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "263",
+    "word": "Bird",
+    "word_zh": "鳥",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "264",
+    "word": "Butterfly",
+    "word_zh": "蝴蝶",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "265",
+    "word": "Bee",
+    "word_zh": "蜜蜂",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "266",
+    "word": "Ant",
+    "word_zh": "螞蟻",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "267",
+    "word": "Spider",
+    "word_zh": "蜘蛛",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "268",
+    "word": "Insect",
+    "word_zh": "昆蟲",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "269",
+    "word": "Fish",
+    "word_zh": "魚",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "270",
+    "word": "Frog",
+    "word_zh": "青蛙",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "271",
+    "word": "Turtle",
+    "word_zh": "烏龜",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "272",
+    "word": "Squirrel",
+    "word_zh": "松鼠",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "273",
+    "word": "Deer",
+    "word_zh": "鹿",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "274",
+    "word": "Rabbit",
+    "word_zh": "兔子",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "275",
+    "word": "Horse",
+    "word_zh": "馬",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "276",
+    "word": "Caterpillar",
+    "word_zh": "毛毛蟲",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "277",
+    "word": "Ladybug",
+    "word_zh": "瓢蟲",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "278",
+    "word": "Snail",
+    "word_zh": "蝸牛",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "279",
+    "word": "Shell",
+    "word_zh": "貝殼",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "280",
+    "word": "Acorn",
+    "word_zh": "橡果",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "281",
+    "word": "Pine Cone",
+    "word_zh": "松果",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "282",
+    "word": "Daisy",
+    "word_zh": "雛菊",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "283",
+    "word": "Cactus",
+    "word_zh": "仙人掌",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "284",
+    "word": "Mushroom",
+    "word_zh": "蘑菇",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "285",
+    "word": "Root",
+    "word_zh": "根",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "286",
+    "word": "Fruit",
+    "word_zh": "水果",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "287",
+    "word": "Vegetable",
+    "word_zh": "蔬菜",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "288",
+    "word": "Nut",
+    "word_zh": "堅果",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "289",
+    "word": "Seed",
+    "word_zh": "種子",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "290",
+    "word": "Pond",
+    "word_zh": "池塘",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "291",
+    "word": "Stream",
+    "word_zh": "小溪",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "292",
+    "word": "Forest",
+    "word_zh": "森林",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "293",
+    "word": "Desert",
+    "word_zh": "沙漠",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "294",
+    "word": "Wetland",
+    "word_zh": "濕地",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "295",
+    "word": "Field",
+    "word_zh": "田野",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "296",
+    "word": "Marsh",
+    "word_zh": "沼澤",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "297",
+    "word": "Glacier",
+    "word_zh": "冰川",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "298",
+    "word": "Volcano",
+    "word_zh": "火山",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "299",
+    "word": "Earth",
+    "word_zh": "地球",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "300",
+    "word": "Tide",
+    "word_zh": "潮汐",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "301",
+    "word": "Wave",
+    "word_zh": "波浪",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "302",
+    "word": "Fossil",
+    "word_zh": "化石",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "303",
+    "word": "Cave",
+    "word_zh": "洞穴",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "304",
+    "word": "Cliff",
+    "word_zh": "懸崖",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "305",
+    "word": "Plateau",
+    "word_zh": "高原",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "306",
+    "word": "Savanna",
+    "word_zh": "大草原",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "307",
+    "word": "Jungle",
+    "word_zh": "叢林",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "308",
+    "word": "Meadow",
+    "word_zh": "草地",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "309",
+    "word": "Orchard",
+    "word_zh": "果樹園",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "310",
+    "word": "Hill",
+    "word_zh": "小山",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "311",
+    "word": "Geyser",
+    "word_zh": "噴泉",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "312",
+    "word": "Coral",
+    "word_zh": "珊瑚",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "313",
+    "word": "Windmill",
+    "word_zh": "風車",
+    "category": "Nature",
+    "category_zh": "大自然"
+  },
+  {
+    "id": "314",
+    "word": "Plate",
+    "word_zh": "盤子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "315",
+    "word": "Bowl",
+    "word_zh": "碗",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "316",
+    "word": "Cup",
+    "word_zh": "杯子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "317",
+    "word": "Glass",
+    "word_zh": "玻璃杯",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "318",
+    "word": "Spoon",
+    "word_zh": "湯匙",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "319",
+    "word": "Fork",
+    "word_zh": "叉子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "320",
+    "word": "Knife",
+    "word_zh": "刀子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "321",
+    "word": "Chopsticks",
+    "word_zh": "筷子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "322",
+    "word": "Napkin",
+    "word_zh": "餐巾紙",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "323",
+    "word": "Table",
+    "word_zh": "桌子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "324",
+    "word": "Chair",
+    "word_zh": "椅子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "325",
+    "word": "Tray",
+    "word_zh": "托盤",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "326",
+    "word": "Saucer",
+    "word_zh": "碟子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "327",
+    "word": "Pitcher",
+    "word_zh": "壺",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "328",
+    "word": "Cutting Board",
+    "word_zh": "砧板",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "329",
+    "word": "Blender",
+    "word_zh": "攪拌機",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "330",
+    "word": "Microwave",
+    "word_zh": "微波爐",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "331",
+    "word": "Oven",
+    "word_zh": "烤箱",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "332",
+    "word": "Pot",
+    "word_zh": "鍋",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "333",
+    "word": "Pan",
+    "word_zh": "平底鍋",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "334",
+    "word": "Ladle",
+    "word_zh": "長柄湯勺",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "335",
+    "word": "Tongs",
+    "word_zh": "夾子",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "336",
+    "word": "Whisk",
+    "word_zh": "打蛋器",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "337",
+    "word": "Rolling Pin",
+    "word_zh": "擀麵棍",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "338",
+    "word": "Baking Sheet",
+    "word_zh": "烤盤",
+    "category": "Tableware",
+    "category_zh": "餐具"
+  },
+  {
+    "id": "339",
+    "word": "Doll",
+    "word_zh": "洋娃娃",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "340",
+    "word": "Teddy Bear",
+    "word_zh": "泰迪熊",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "341",
+    "word": "Ball",
+    "word_zh": "球",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "342",
+    "word": "Puzzle",
+    "word_zh": "拼圖",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "343",
+    "word": "Building Blocks",
+    "word_zh": "積木",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "344",
+    "word": "Kite",
+    "word_zh": "風箏",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "345",
+    "word": "Yo-Yo",
+    "word_zh": "溜溜球",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "346",
+    "word": "Jump Rope",
+    "word_zh": "跳繩",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "347",
+    "word": "Game Console",
+    "word_zh": "遊戲機",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "348",
+    "word": "Board Game",
+    "word_zh": "桌遊",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "349",
+    "word": "Plush Toy",
+    "word_zh": "毛絨玩具",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "350",
+    "word": "Marbles",
+    "word_zh": "彈珠",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "351",
+    "word": "Hula Hoop",
+    "word_zh": "呼啦圈",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "352",
+    "word": "Toy Phone",
+    "word_zh": "玩具電話",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "353",
+    "word": "Magic Set",
+    "word_zh": "魔術道具",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "354",
+    "word": "Bouncing Ball",
+    "word_zh": "彈跳球",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "355",
+    "word": "Dinosaur Toy",
+    "word_zh": "恐龍玩具",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "356",
+    "word": "Action Set",
+    "word_zh": "動作套裝",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "357",
+    "word": "Magnifying Glass",
+    "word_zh": "放大鏡",
+    "category": "Toy",
+    "category_zh": "玩具"
+  },
+  {
+    "id": "358",
+    "word": "Robot Toy",
+    "word_zh": "機器人玩具",
+    "category": "Toy",
+    "category_zh": "玩具"
+  }
+]
