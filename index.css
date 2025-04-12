@@ -92,7 +92,7 @@ main {
 	place-items: center;
 	opacity: 0;
 	transition: display 0.3s allow-discrete, opacity 0.3s;
-	z-index: 1;
+	z-index: 20; /* Ensure it appears above the VIcon */
 	border-radius: 1rem;
 }
 
@@ -315,7 +315,7 @@ button:hover {
 	place-items: center;
 	opacity: 0;
 	transition: display 0.3s allow-discrete, opacity 0.3s;
-	z-index: 1;
+	z-index: 20; /* Ensure it appears above the VIcon */
 	border-radius: 1rem;
 }
 
@@ -363,4 +363,131 @@ button:hover {
 
 #magnifierButton {
 	float:right;
+}
+
+.tmenu-button {
+	width: 3rem;
+	height: 3rem;
+	font-size: 1.5rem;
+	background-color: #ddd;
+	border: 1px solid #aaa;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	margin: 0.5rem;
+}
+
+.tmenu-button:hover {
+	background-color: #bbb;
+}
+
+/* Style the Tmenu containers and icons */
+.tmenu-container {
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #aaa;
+	border-radius: 0.5rem;
+	background-color: #ddd;
+	cursor: pointer;
+	margin: 0.5rem;
+}
+
+.tmenu-container:hover {
+	background-color: #bbb;
+}
+
+.tmenu-container.disabled {
+	background-color: #aaa;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.tmenu-icon {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	color: #333;
+}
+
+/* Arrange Tmenu buttons in a grid layout */
+#TmenuList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	justify-items: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+/* Style the drawing interface and tools */
+#drawCanvasContainer {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border: 2px solid #ccc;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+#drawCanvas {
+	border: 1px solid #000;
+	cursor: crosshair;
+}
+
+#drawTools {
+	display: flex;
+	gap: 1rem;
+}
+
+#pen, #eraser, #done {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pen:hover, #eraser:hover, #done:hover {
+	background-color: #ddd;
+}
+
+#drawActions {
+	display: flex;
+	gap: 1rem;
+}
+
+#reset {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#reset:hover {
+	background-color: #ddd;
+}
+
+/* Styles for the draggable VIcon */
+.draggable-vicon {
+	width: 4rem;
+	height: 4rem;
+	cursor: grab;
+	z-index: 10; /* Lowered z-index to ensure it stays below opened divs or sections */
 }

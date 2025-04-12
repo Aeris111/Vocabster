@@ -24,8 +24,8 @@
 			</h1>
 			<section id="Tmenu">
 				<div id="Tmenu-inner">
-					<h1>this is the menu</h1>
-					<ul id="TmenuList"></ul>
+					<h1>Today's Menu</h1>
+					<ul id="TmenuList"></ul> <!-- Placeholder for Tmenu buttons -->
 				</div>
 			</section>		
 			<!-- This section displays a table of all cards for quick access. -->
@@ -64,6 +64,20 @@
 					<!-- STUDENTS: End of recommended modifications -->
 				</div>
 			</section>
+				<!-- Drawing interface structure -->
+				<div id="drawCanvasContainer" style="display: none;">
+					<h2 id="drawWord"></h2>
+					<h2 id="drawWordZh" style="margin-left: 1rem;"></h2> <!-- Added for word_zh -->
+					<canvas id="drawCanvas"></canvas>
+					<div id="drawTools">
+						<button id="pen">✏️</button>
+						<button id="eraser">🧽</button>
+					</div>
+					<div id="drawActions">
+						<button id="done">I'm done!</button>
+						<button id="reset">Reset</button>
+					</div>
+				</div>
 			<!-- Navigation and learning progress buttons for the current flashcard. -->
 			<div id="actions">
 				<button id="btn-back">‹ Back</button>

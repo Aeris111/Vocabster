@@ -161,6 +161,148 @@ document.getElementById("btn-easy").addEventListener("click", () => {
 	renderCard();
 });
 
+const drawCanvasContainer = document.getElementById("drawCanvasContainer");
+const drawCanvas = document.getElementById("drawCanvas");
+const drawWord = document.getElementById("drawWord");
+const penTool = document.getElementById("pen");
+const eraserTool = document.getElementById("eraser");
+const doneButton = document.getElementById("done");
+const resetButton = document.getElementById("reset");
+
+let isDrawing = false;
+let context = drawCanvas.getContext("2d");
+let currentTool = "pen";
+
+// Set up canvas for drawing
+drawCanvas.width = 400;
+drawCanvas.height = 400;
+context.lineWidth = 5;
+context.lineCap = "round";
+
+/** Makes the VIcon draggable and displays it on the main interface. */
+function makeVIconDraggable(imageData) {
+	const vIcon = document.createElement("img");
+	vIcon.src = imageData;
+	vIcon.classList.add("draggable-vicon");
+	vIcon.style.position = "absolute";
+	vIcon.style.left = "50%";
+	vIcon.style.top = "50%";
+	vIcon.style.transform = "translate(-50%, -50%)";
+	document.body.appendChild(vIcon);
+
+	// Enable dragging
+	let isDragging = false;
+	let offsetX, offsetY;
+
+	vIcon.addEventListener("mousedown", (e) => {
+		isDragging = true;
+		offsetX = e.clientX - vIcon.getBoundingClientRect().left;
+		offsetY = e.clientY - vIcon.getBoundingClientRect().top;
+		vIcon.style.cursor = "grabbing";
+	});
+
+	document.addEventListener("mousemove", (e) => {
+		if (isDragging) {
+			vIcon.style.left = `${e.clientX - offsetX}px`;
+			vIcon.style.top = `${e.clientY - offsetY}px`;
+		}
+	});
+
+	document.addEventListener("mouseup", () => {
+		isDragging = false;
+		vIcon.style.cursor = "grab";
+	});
+}
+
+// Update showDrawInterface to disable the button and close Tmenu after saving
+function showDrawInterface(card, container) {
+	drawCanvasContainer.style.display = "flex";
+	drawWord.textContent = card.word;
+	document.getElementById("drawWordZh").textContent = card.word_zh || ""; // Set word_zh
+	context.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+
+	// Handle drawing
+	drawCanvas.onmousedown = (e) => {
+		isDrawing = true;
+		context.beginPath();
+		context.moveTo(e.offsetX, e.offsetY);
+	};
+	drawCanvas.onmousemove = (e) => {
+		if (isDrawing) {
+			if (currentTool === "pen") {
+				context.strokeStyle = "black";
+				context.lineTo(e.offsetX, e.offsetY);
+				context.stroke();
+			} else if (currentTool === "eraser") {
+				context.clearRect(e.offsetX - 10, e.offsetY - 10, 20, 20);
+			}
+		}
+	};
+	drawCanvas.onmouseup = () => (isDrawing = false);
+	drawCanvas.onmouseleave = () => (isDrawing = false);
+
+	// Save the drawing as an icon
+	doneButton.onclick = () => {
+		const imageData = drawCanvas.toDataURL("image/png");
+		const icon = container.querySelector(".tmenu-icon");
+		icon.style.backgroundImage = `url(${imageData})`;
+		icon.textContent = ""; // Remove "?" text
+		drawCanvasContainer.style.display = "none";
+
+		// Make the VIcon draggable
+		makeVIconDraggable(imageData);
+
+		// Disable the button and close Tmenu
+		container.classList.add("disabled");
+		container.removeEventListener("click", () => showDrawInterface(card, container));
+		document.getElementById("Tmenu-checkbox").checked = false; // Close Tmenu
+	};
+}
+
+// Reset the canvas
+resetButton.onclick = () => {
+	context.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+};
+
+// Tool selection
+penTool.onclick = () => {
+	currentTool = "pen";
+	drawCanvas.style.cursor = "url('pen-cursor.png'), auto";
+};
+eraserTool.onclick = () => {
+	currentTool = "eraser";
+	drawCanvas.style.cursor = "url('eraser-cursor.png'), auto";
+};
+
+// Update populateTmenu to create clickable containers for VIcons
+function populateTmenu() {
+	const tmenuList = document.getElementById("TmenuList");
+	tmenuList.innerHTML = ""; // Clear previous entries
+
+	// Filter cards without images
+	const cardsWithoutImages = cards.filter(card => !card.image);
+
+	// Randomly select 5 cards
+	const selectedCards = cardsWithoutImages.sort(() => 0.5 - Math.random()).slice(0, 5);
+
+	// Create containers for each selected card
+	selectedCards.forEach(card => {
+		const container = document.createElement("div");
+		container.classList.add("tmenu-container");
+		container.addEventListener("click", () => showDrawInterface(card, container));
+
+		const icon = document.createElement("div");
+		icon.classList.add("tmenu-icon");
+		icon.textContent = "?"; // Placeholder text
+
+		container.appendChild(icon);
+		tmenuList.appendChild(container);
+	});
+}
+
+// Call populateTmenu on page load
+populateTmenu();
+
 // Initial render
 initEntries();
 renderCard();
