@@ -113,7 +113,6 @@ main {
 	overflow-y: auto; /* Add vertical scrollbar */
 	scroll-behavior: smooth;
 	padding-right: 0.5rem; /* Add padding for scrollbar spacing */
-	padding-bottom: 2.5rem; /* Add padding to ensure the last item is fully visible */
 	/* Hide scrollbar */
 	scrollbar-width: none; /* For Firefox */
 	-ms-overflow-style: none; /* For Internet Explorer and Edge */
