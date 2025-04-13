@@ -18,29 +18,25 @@
 		<main>
 			<!-- The header includes a button to show/hide all flashcard entries. -->
 			<h1 id="header">
-				<label for="Tmenu-checkbox" id="TmenuButton" title="today's menu">📖</label>
-				<label for="magnifier-checkbox" id="magnifierButton" title="Show All Entries">🔎</label>
+				<label for="Tmenu-checkbox" id="TmenuButton" title="Today's Menu">
+					<img src="res/img/menu.png" alt="Menu" />
+				</label>
+				<label for="magnifier-checkbox" id="magnifierButton" title="Show All Entries">
+					<img src="res/img/mag.png" alt="Magnifier" />
+				</label>
 				SOS
 			</h1>
 			<section id="Tmenu">
 				<div id="Tmenu-inner">
-					<h1>Today's Menu</h1>
+					<h1>Today's Menu <button id="TmenuCloseButton" title="Close Menu">✖</button></h1> <!-- Close button moved -->
 					<ul id="TmenuList"></ul> <!-- Placeholder for Tmenu buttons -->
 				</div>
 			</section>		
-			<!-- This section displays a table of all cards for quick access. -->
-			<section id="entries">
-				<div id="entries-inner">
-					<table>
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Word</th>
-								<th>Due Date</th>
-							</tr>
-						</thead>
-						<tbody id="entries-body"></tbody>
-					</table>
+			<!-- This section displays items only by image, similar to Tmenu. -->
+			<section id="stomach">
+				<div id="stomach-inner">
+					<h1>Vocabster's Stomach <button id="stomachCloseButton" title="Close Stomach">✖</button></h1>
+					<div id="stomachCategories"></div> <!-- Dynamically populated categories -->
 				</div>
 			</section>
 			<!-- The main flashcard section. Clicking flips between front and back. -->
@@ -66,15 +62,20 @@
 			</section>
 				<!-- Drawing interface structure -->
 				<div id="drawCanvasContainer" style="display: none;">
+					<button id="drawCanvasCloseButton" title="Close Drawing">✖</button> <!-- Close button -->
 					<h2 id="drawWord"></h2>
 					<h2 id="drawWordZh" style="margin-left: 1rem;"></h2> <!-- Added for word_zh -->
 					<canvas id="drawCanvas"></canvas>
 					<div id="drawTools">
-						<button id="pen">✏️</button>
-						<button id="eraser">🧽</button>
+						<button id="pen" title="Pencil">
+							<img src="res/img/pencil.png" alt="Pencil" />
+						</button>
+						<button id="eraser" title="Eraser">
+							<img src="res/img/eraser.png" alt="Eraser" />
+						</button>
 					</div>
 					<div id="drawActions">
-						<button id="done">I'm done!</button>
+						<button id="done">Done!</button>
 						<button id="reset">Reset</button>
 					</div>
 				</div>
@@ -88,6 +89,7 @@
 				</div>
 				<button id="btn-skip">Skip ›</button>
 			</div>
+			<img id="centerImage" src="res/img/vocabster_chara.png" alt="Vocabster Character" />
 		</main>
 		<!-- This line imports the JavaScript file containing the logic for the flashcard app. It can be modified to add functionality to the app. -->
 		<script src="./index.js" type="module"></script>

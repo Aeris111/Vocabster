@@ -81,73 +81,93 @@ main {
 }
 
 /* The entries list, which is overlaid on top of the flashcard area. */
-#entries {
-	position: relative;
-	grid-row: 2 / 3;
-	grid-column: 1 / 2;
-	height: 100%;
+#stomach {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 30rem;
+	height: 80%;
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	display: none;
-	place-items: center;
-	opacity: 0;
-	transition: display 0.3s allow-discrete, opacity 0.3s;
-	z-index: 20; /* Ensure it appears above the VIcon */
 	border-radius: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	z-index: 1000;
+	overflow: hidden; /* Prevent content overflow */
 }
 
-#entries-inner {
-	position: absolute;
-	inset: 0;
-	overflow-y: auto;
-}
-
-/* Table settings and row hover effects for the entries list. */
-#entries table {
+#stomach-inner {
 	width: 100%;
-	border-collapse: collapse;
-	text-align: center;
+	height: 100%;
+	overflow: hidden; /* Prevent horizontal overflow */
+	position: relative;
 }
 
-#entries th, #entries td {
-	padding: 0.75rem;
-	border-bottom: 1px solid #ddd;
+#stomachCategories {
+	height: 100%;
+	overflow-y: auto; /* Add vertical scrollbar */
+	scroll-behavior: smooth;
+	padding-right: 0.5rem; /* Add padding for scrollbar spacing */
 }
 
-#entries th {
-	background-color: #ddf5ff;
+#stomach-inner h1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
 }
 
-#entries th:first-child {
-	border-top-left-radius: 1rem;
-}
-
-#entries th:last-child {
-	border-top-right-radius: 1rem;
-}
-
-#entries thead {
-	position: sticky;
-	top: 0;
-}
-
-#entries tbody tr {
+#stomachCloseButton {
+	padding: 0.25rem 0.5rem;
+	background: none;
+	border: 1px solid #333;
+	border-radius: 0.25rem;
+	font-size: 1rem;
 	cursor: pointer;
-	transition: background-color 0.3s;
+	color: #333;
+	transition: background-color 0.3s, color 0.3s;
 }
 
-#entries tbody tr:hover {
-	background-color: #f1f1f1;
+#stomachCloseButton:hover {
+	background-color: #333;
+	color: #fff;
 }
 
-/* The #toggle-entries element acts as a label for #toggle-entries-checkbox. 
-	Clicking #toggle-entries changes the state of #toggle-entries-checkbox.
-	When #toggle-entries-checkbox is checked, this ruleset is in effect, and the #entries table becomes visible.
-	Otherwise, the previous rules (display: none; opacity: 0;) inside the #entries ruleset remain effective, and the table is hidden. */
+.stomach-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* Maximum 4 containers per row */
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
 
+.stomach-grid img {
+	width: 100%;
+	aspect-ratio: 1 / 1; /* Ensure square shape */
+	border: 1px solid #ddd;
+	border-radius: 0.25rem;
+	object-fit: cover;
+	cursor: pointer;
+	transition: transform 0.3s, box-shadow 0.3s;
+	background-color: white; /* Set background color to white */
+}
 
-/* Ensure #magnifier-checkbox controls the visibility of #entries */
-#magnifier-checkbox:checked ~ main #entries {
+.stomach-grid img::after {
+	content: ""; /* Hide the word text */
+}
+
+.stomach-grid img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure #magnifier-checkbox controls the visibility of #stomach */
+#magnifier-checkbox:checked ~ main #stomach {
 	display: grid;
 	opacity: 1;
 	@starting-style {
@@ -303,7 +323,7 @@ button:hover {
 	background-color: #ccccff;
 }
 
-/* Style #Tmenu similar to #entries */
+/* Style #Tmenu similar to #stomach */
 #Tmenu {
 	position: relative;
 	grid-row: 2 / 3;
@@ -349,20 +369,53 @@ button:hover {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#Tmenu-inner h1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 #TmenuButton {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	border: 2.5px solid black; /* Added black border */
+}
+
+#TmenuButton img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	aspect-ratio: 1 / 1; /* Ensures the image remains square */
 }
 
 #TmenuButton:hover {
-    background-color: #45a049;
+	background-color: white;
 }
 
 #magnifierButton {
-	float:right;
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	border: 2.5px solid black; /* Added black border */
+}
+
+#magnifierButton img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	aspect-ratio: 1 / 1; /* Ensures the image remains square */
+}
+
+#magnifierButton:hover {
+	background-color: white;
+}
+
+#magnifier-checkbox:not(:checked) ~ main #stomach {
+    display: none;
+    opacity: 0;
 }
 
 .tmenu-button {
@@ -453,7 +506,30 @@ button:hover {
 	gap: 1rem;
 }
 
-#pen, #eraser, #done {
+#pen, #eraser {
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	border: 1px solid #333;
+	border-radius: 0.25rem;
+	background: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#pen img, #eraser img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#pen:hover, #eraser:hover {
+	background-color: #ddd;
+}
+
+#done {
 	padding: 0.5rem 1rem;
 	border: none;
 	border-radius: 0.5rem;
@@ -462,7 +538,7 @@ button:hover {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#pen:hover, #eraser:hover, #done:hover {
+#done:hover {
 	background-color: #ddd;
 }
 
@@ -490,4 +566,60 @@ button:hover {
 	height: 4rem;
 	cursor: grab;
 	z-index: 10; /* Lowered z-index to ensure it stays below opened divs or sections */
+}
+
+/* Style the image to ensure it is centered in the main interface */
+#centerImage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 25%;
+	max-height: 25%;
+	border-radius: 1rem;
+}
+
+/* Style the close button for TMenu */
+#TmenuCloseButton {
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: 1px solid #333;
+	border-radius: 0.25rem; /* Makes it a square with slightly rounded corners */
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: #333;
+	transition: background-color 0s, color 0s;
+}
+
+#TmenuCloseButton:hover {
+	background-color: #333;
+	color: #fff; /* Change "X" color to white */
+}
+
+/* Style the close button for drawCanvasContainer */
+#drawCanvasCloseButton {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: 1px solid #333;
+	border-radius: 0.25rem; /* Makes it a square with slightly rounded corners */
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: #333;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+#drawCanvasCloseButton:hover {
+	background-color: #333;
+	color: #fff; /* Change "X" color to white */
 }

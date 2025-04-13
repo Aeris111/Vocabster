@@ -23,10 +23,10 @@ const cards = data
 
 let currentIndex = 0;
 
-const entriesBody = document.getElementById("entries-body");
+const stomachBody = document.getElementById("stomach-body");
 
 /** Creates a table row for each card, allowing quick navigation. */
-function initEntries() {
+function initStomach() {
 	// Build table rows
 	cards.forEach((card, i) => {
 		const row = document.createElement("tr");
@@ -44,15 +44,15 @@ function initEntries() {
 		row.appendChild(cellId);
 		row.appendChild(cellWord);
 		row.appendChild(cellDue);
-		entriesBody.appendChild(row);
+		stomachBody.appendChild(row);
 	});
 }
 
 /** Updates highlighted row and due dates each time we render or change data. */
-function updateEntries() {
+function updateStomach() {
 	// Update row highlight and due dates
 	cards.forEach((card, i) => {
-		const row = entriesBody.children[i];
+		const row = stomachBody.children[i];
 		row.classList.toggle("row-highlight", i === currentIndex);
 
 		const cellDue = row.children[row.childElementCount - 1];
@@ -106,7 +106,7 @@ function renderCard() {
 	
 	// STUDENTS: End of recommended modifications
 
-	updateEntries();
+	updateStomach();
 }
 
 /** Navigates to the previous card. */
@@ -142,7 +142,7 @@ function updateDueDate(type) {
 	const dueDate = new Date(today.setDate(today.getDate() + dayOffset[type]) - today.getTimezoneOffset() * 60 * 1000);
 	(progressData[card.id] ||= {}).dueDate = dueDate.toISOString().split("T")[0]; // Print the date in YYYY-MM-DD format
 	saveProgress(progressData);
-	updateEntries();
+	updateStomach();
 }
 
 document.getElementById("btn-again").addEventListener("click", () => {
@@ -249,6 +249,9 @@ function showDrawInterface(card, container) {
 		icon.textContent = ""; // Remove "?" text
 		drawCanvasContainer.style.display = "none";
 
+		 // Reset cursor to default
+		drawCanvas.style.cursor = "default";
+
 		// Make the VIcon draggable
 		makeVIconDraggable(imageData);
 
@@ -267,11 +270,11 @@ resetButton.onclick = () => {
 // Tool selection
 penTool.onclick = () => {
 	currentTool = "pen";
-	drawCanvas.style.cursor = "url('pen-cursor.png'), auto";
+	drawCanvas.style.cursor = "url('res/cur/pencil.cur'), auto"; // Set cursor to pencil cursor
 };
 eraserTool.onclick = () => {
 	currentTool = "eraser";
-	drawCanvas.style.cursor = "url('eraser-cursor.png'), auto";
+	drawCanvas.style.cursor = "url('res/cur/eraser.cur'), auto"; // Set cursor to eraser cursor
 };
 
 // Update populateTmenu to create clickable containers for VIcons
@@ -303,7 +306,63 @@ function populateTmenu() {
 // Call populateTmenu on page load
 populateTmenu();
 
+// Close TMenu when the close button is clicked
+document.getElementById("TmenuCloseButton").addEventListener("click", () => {
+	document.getElementById("Tmenu-checkbox").checked = false; // Uncheck the checkbox to close TMenu
+});
+
+// Close drawCanvasContainer when the close button is clicked
+document.getElementById("drawCanvasCloseButton").addEventListener("click", () => {
+	document.getElementById("drawCanvasContainer").style.display = "none"; // Hide the drawing interface
+});
+
+document.getElementById("stomachCloseButton").addEventListener("click", () => {
+	document.getElementById("stomach").style.display = "none"; // Hide the stomach section
+});
+
+function populateStomach() {
+	const stomachCategories = document.getElementById("stomachCategories");
+
+	// Clear previous content
+	stomachCategories.innerHTML = "";
+
+	// Group cards by category
+	const categories = cards.reduce((acc, card) => {
+		if (!acc[card.category]) acc[card.category] = [];
+		acc[card.category].push(card);
+		return acc;
+	}, {});
+
+	// Create a section for each category
+	Object.entries(categories).forEach(([category, items]) => {
+		const categoryTitle = document.createElement("h2");
+		categoryTitle.textContent = category;
+
+		const categoryGrid = document.createElement("div");
+		categoryGrid.classList.add("stomach-grid");
+
+		// Add images to the grid
+		items.forEach((item) => {
+			const img = document.createElement("img");
+			if (item.image) {
+				img.src = item.image;
+				img.alt = item.word;
+				img.title = item.word;
+			} else {
+				img.style.display = "none"; // Blank the container if no image
+			}
+			categoryGrid.appendChild(img);
+		});
+
+		stomachCategories.appendChild(categoryTitle);
+		stomachCategories.appendChild(categoryGrid);
+	});
+}
+
+// Call populateStomach on page load
+populateStomach();
+
 // Initial render
-initEntries();
+initStomach();
 renderCard();
 
