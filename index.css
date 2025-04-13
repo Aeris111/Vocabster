@@ -558,10 +558,16 @@ button:hover {
 	height: 4rem;
 	cursor: grab;
 	z-index: 5; /* Lowered z-index to ensure it stays below opened divs or sections */
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.draggable-vicon.dissipate {
+	opacity: 0;
+	transform: scale(0.5);
 }
 
 /* Style the image to ensure it is centered in the main interface */
-#centerImage {
+#vocMon {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -569,6 +575,21 @@ button:hover {
 	max-width: 25%;
 	max-height: 25%;
 	border-radius: 1rem;
+}
+
+/* Style the new container and set the image as its background */
+#vocMonContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18%;
+    height: 35%;
+    background-image: url("res/img/vocabster_chara.png");
+    background-size: contain; /* Ensures the entire image is visible */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    border-radius: 1rem;
 }
 
 /* Style the close button for TMenu */
@@ -615,3 +636,4 @@ button:hover {
 	background-color: #333;
 	color: #fff; /* Change "X" color to white */
 }
+

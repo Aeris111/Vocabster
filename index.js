@@ -184,34 +184,93 @@ function makeVIconDraggable(imageData) {
 	const vIcon = document.createElement("img");
 	vIcon.src = imageData;
 	vIcon.classList.add("draggable-vicon");
+
+	const cardInner = document.getElementById("card-inner");
+	const vocMonContainer = document.getElementById("vocMonContainer");
+
+	// Generate random position inside card-inner
+	let randomLeft, randomTop;
+	do {
+		randomLeft = Math.random() * (cardInner.offsetWidth - 64); // 64px is the approximate size of the VIcon
+		randomTop = Math.random() * (cardInner.offsetHeight - 64);
+	} while (
+		randomLeft + 64 > vocMonContainer.offsetLeft &&
+		randomLeft < vocMonContainer.offsetLeft + vocMonContainer.offsetWidth &&
+		randomTop + 64 > vocMonContainer.offsetTop &&
+		randomTop < vocMonContainer.offsetTop + vocMonContainer.offsetHeight
+	);
+
 	vIcon.style.position = "absolute";
-	vIcon.style.left = "50%";
-	vIcon.style.top = "50%";
-	vIcon.style.transform = "translate(-50%, -50%)";
-	document.body.appendChild(vIcon);
+	vIcon.style.left = `${randomLeft}px`;
+	vIcon.style.top = `${randomTop}px`;
+	vIcon.style.transform = "translate(0, 0)";
+	cardInner.appendChild(vIcon);
 
 	// Enable dragging
 	let isDragging = false;
 	let offsetX, offsetY;
+
+	const onMouseMove = (e) => {
+		if (isDragging) {
+			const newLeft = e.clientX - offsetX - cardInner.getBoundingClientRect().left;
+			const newTop = e.clientY - offsetY - cardInner.getBoundingClientRect().top;
+
+			// Update position
+			vIcon.style.left = `${newLeft}px`;
+			vIcon.style.top = `${newTop}px`;
+
+			// Check if VIcon touches vocMon
+			const vIconRect = vIcon.getBoundingClientRect();
+			const vocMonRect = vocMonContainer.getBoundingClientRect();
+			if (
+				vIconRect.right > vocMonRect.left &&
+				vIconRect.left < vocMonRect.right &&
+				vIconRect.bottom > vocMonRect.top &&
+				vIconRect.top < vocMonRect.bottom
+			) {
+				// Trigger dissipate effect
+				vIcon.classList.add("dissipate");
+				setTimeout(() => {
+					vIcon.remove();
+					// Update data and refresh stomach
+					updateDataAfterFeed();
+					populateStomach();
+				}, 500); // Match the duration of the dissipate effect
+				document.removeEventListener("mousemove", onMouseMove);
+				document.removeEventListener("mouseup", onMouseUp);
+			}
+		}
+	};
+
+	const onMouseUp = () => {
+		isDragging = false;
+		vIcon.style.cursor = "grab";
+		document.removeEventListener("mousemove", onMouseMove);
+		document.removeEventListener("mouseup", onMouseUp);
+	};
 
 	vIcon.addEventListener("mousedown", (e) => {
 		isDragging = true;
 		offsetX = e.clientX - vIcon.getBoundingClientRect().left;
 		offsetY = e.clientY - vIcon.getBoundingClientRect().top;
 		vIcon.style.cursor = "grabbing";
-	});
 
-	document.addEventListener("mousemove", (e) => {
-		if (isDragging) {
-			vIcon.style.left = `${e.clientX - offsetX}px`;
-			vIcon.style.top = `${e.clientY - offsetY}px`;
-		}
+		document.addEventListener("mousemove", onMouseMove);
+		document.addEventListener("mouseup", onMouseUp);
 	});
+}
 
-	document.addEventListener("mouseup", () => {
-		isDragging = false;
-		vIcon.style.cursor = "grab";
-	});
+/** Updates data after feeding Vocabster. */
+function updateDataAfterFeed() {
+    if (cards.length > 0) {
+        const fedCard = cards.find(card => !card.image); // Find the card without an image
+        if (fedCard) {
+            cards.splice(cards.indexOf(fedCard), 1); // Remove the fed card from the array
+            delete progressData[fedCard.id]; // Remove progress for the fed card
+            saveProgress(progressData);
+            populateStomach(); // Refresh the stomach
+        }
+    }
 }
 
 // Update showDrawInterface to disable the button and close Tmenu after saving
@@ -248,13 +307,16 @@ function showDrawInterface(card, container) {
 		icon.style.backgroundImage = `url(${imageData})`;
 		icon.textContent = ""; // Remove "?" text
 		drawCanvasContainer.style.display = "none";
-
-		 // Reset cursor to default
+	
+		// Reset cursor to default
 		drawCanvas.style.cursor = "default";
-
+	
+		// Update the card's image property
+		card.image = imageData;
+	
 		// Make the VIcon draggable
 		makeVIconDraggable(imageData);
-
+	
 		// Disable the button and close Tmenu
 		container.classList.add("disabled");
 		container.removeEventListener("click", () => showDrawInterface(card, container));
@@ -322,10 +384,10 @@ document.getElementById("stomachCloseButton").addEventListener("click", () => {
 
 document.getElementById("magnifierButton").addEventListener("click", () => {
     const stomach = document.getElementById("stomach");
-    const isHidden = getComputedStyle(stomach).display === "none";
+    const isHidden = stomach.style.display === "none" || stomach.style.display === "";
     stomach.style.display = isHidden ? "flex" : "none";
+    stomach.style.opacity = isHidden ? "1" : "0"; // Ensure opacity is reset
 });
-
 
 function populateStomach() {
 	const stomachCategories = document.getElementById("stomachCategories");
