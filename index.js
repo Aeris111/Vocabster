@@ -320,6 +320,13 @@ document.getElementById("stomachCloseButton").addEventListener("click", () => {
 	document.getElementById("stomach").style.display = "none"; // Hide the stomach section
 });
 
+document.getElementById("magnifierButton").addEventListener("click", () => {
+    const stomach = document.getElementById("stomach");
+    const isHidden = getComputedStyle(stomach).display === "none";
+    stomach.style.display = isHidden ? "flex" : "none";
+});
+
+
 function populateStomach() {
 	const stomachCategories = document.getElementById("stomachCategories");
 

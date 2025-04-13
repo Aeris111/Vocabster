@@ -166,15 +166,6 @@ main {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Ensure #magnifier-checkbox controls the visibility of #stomach */
-#magnifier-checkbox:checked ~ main #stomach {
-	display: grid;
-	opacity: 1;
-	@starting-style {
-		opacity: 0;
-	}
-}
-
 .row-highlight {
 	background-color: #fff3cd;
 }
@@ -398,7 +389,8 @@ button:hover {
 	display: inline-block;
 	width: 3rem;
 	height: 3rem;
-	border: 2.5px solid black; /* Added black border */
+	border: 2.5px solid black; 
+	z-index: 20;
 }
 
 #magnifierButton img {
@@ -565,7 +557,7 @@ button:hover {
 	width: 4rem;
 	height: 4rem;
 	cursor: grab;
-	z-index: 10; /* Lowered z-index to ensure it stays below opened divs or sections */
+	z-index: 5; /* Lowered z-index to ensure it stays below opened divs or sections */
 }
 
 /* Style the image to ensure it is centered in the main interface */
