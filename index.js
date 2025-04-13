@@ -280,6 +280,15 @@ function showDrawInterface(card, container) {
 	document.getElementById("drawWordZh").textContent = card.word_zh || ""; // Set word_zh
 	context.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
 
+	// Set cursor to the current tool
+	if (currentTool === "pen") {
+		drawCanvas.style.cursor = "url('res/cur/pencil.cur'), auto";
+		drawCanvasContainer.style.cursor = "url('res/cur/pencil.cur'), auto";
+	} else if (currentTool === "eraser") {
+		drawCanvas.style.cursor = "url('res/cur/eraser.cur'), auto";
+		drawCanvasContainer.style.cursor = "url('res/cur/eraser.cur'), auto";
+	}
+
 	// Handle drawing
 	drawCanvas.onmousedown = (e) => {
 		isDrawing = true;
@@ -333,11 +342,78 @@ resetButton.onclick = () => {
 penTool.onclick = () => {
 	currentTool = "pen";
 	drawCanvas.style.cursor = "url('res/cur/pencil.cur'), auto"; // Set cursor to pencil cursor
+	drawCanvasContainer.style.cursor = "url('res/cur/pencil.cur'), auto"; // Update container cursor
 };
 eraserTool.onclick = () => {
 	currentTool = "eraser";
 	drawCanvas.style.cursor = "url('res/cur/eraser.cur'), auto"; // Set cursor to eraser cursor
+	drawCanvasContainer.style.cursor = "url('res/cur/eraser.cur'), auto"; // Update container cursor
 };
+
+/** Displays the VIconDisplay div with the selected item's details. */
+function showVIconDisplay(item) {
+	const display = document.getElementById("VIconDisplay");
+	const word = document.getElementById("VIconDisplay-word");
+	const wordZh = document.getElementById("VIconDisplay-word-zh");
+	const image = document.getElementById("VIconDisplay-image");
+
+	word.textContent = item.word;
+	wordZh.textContent = item.word_zh || ""; // Display word_zh if available
+	image.src = item.image || ""; // Use a placeholder if no image
+	image.style.display = item.image ? "block" : "none"; // Hide image if not available
+
+	display.style.display = "flex";
+}
+
+document.getElementById("VIconDisplayCloseButton").addEventListener("click", () => {
+	document.getElementById("VIconDisplay").style.display = "none";
+});
+
+document.getElementById("VIconDisplayEditButton").addEventListener("click", () => {
+	const display = document.getElementById("VIconDisplay");
+	const word = document.getElementById("VIconDisplay-word").textContent;
+	const wordZh = document.getElementById("VIconDisplay-word-zh").textContent;
+	const imageSrc = document.getElementById("VIconDisplay-image").src;
+
+	// Find the card being edited
+	const card = cards.find((c) => c.word === word && c.word_zh === wordZh);
+
+	if (card) {
+		// Load the image into the canvas
+		const img = new Image();
+		img.onload = () => {
+			context.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+			context.drawImage(img, 0, 0, drawCanvas.width, drawCanvas.height);
+		};
+		img.src = imageSrc;
+
+		// Show the drawing interface
+		drawCanvasContainer.style.display = "flex";
+		drawWord.textContent = card.word;
+		document.getElementById("drawWordZh").textContent = card.word_zh || "";
+
+		// Change the "Done" button to "Finish Editing"
+		doneButton.textContent = "Finish Editing";
+		doneButton.onclick = () => {
+			const updatedImageData = drawCanvas.toDataURL("image/png");
+			card.image = updatedImageData;
+
+			// Update VIconDisplay
+			document.getElementById("VIconDisplay-image").src = updatedImageData;
+
+			// Update Stomach
+			populateStomach();
+
+			// Reset and close the drawing interface
+			drawCanvasContainer.style.display = "none";
+			doneButton.textContent = "Done!";
+			doneButton.onclick = null; // Reset to default behavior
+		};
+
+		// Close the VIconDisplay
+		display.style.display = "none";
+	}
+});
 
 // Update populateTmenu to create clickable containers for VIcons
 function populateTmenu() {
@@ -417,6 +493,7 @@ function populateStomach() {
 				img.src = item.image;
 				img.alt = item.word;
 				img.title = item.word;
+				img.addEventListener("click", () => showVIconDisplay(item)); // Add click event
 			} else {
 				img.style.display = "none"; // Blank the container if no image
 			}

@@ -785,22 +785,14 @@
   },
   {
     "id": "99",
-    "word": "Broccoli",
-    "word_zh": "花椰菜",
+    "word": "Cauliflower",
+    "word_zh": "椰菜花",
     "category": "Vegetable",
     "category_zh": "蔬菜",
     "img": ""
   },
   {
     "id": "100",
-    "word": "Cauliflower",
-    "word_zh": "菜花",
-    "category": "Vegetable",
-    "category_zh": "蔬菜",
-    "img": ""
-  },
-  {
-    "id": "101",
     "word": "Eggplant",
     "word_zh": "茄子",
     "category": "Vegetable",
@@ -808,7 +800,7 @@
     "img": ""
   },
   {
-    "id": "102",
+    "id": "101",
     "word": "Zucchini",
     "word_zh": "櫛瓜",
     "category": "Vegetable",
@@ -816,7 +808,7 @@
     "img": ""
   },
   {
-    "id": "103",
+    "id": "102",
     "word": "Rice",
     "word_zh": "米飯",
     "category": "Food",
@@ -824,7 +816,7 @@
     "img": ""
   },
   {
-    "id": "104",
+    "id": "103",
     "word": "Pasta",
     "word_zh": "義大利麵",
     "category": "Food",
@@ -832,7 +824,7 @@
     "img": ""
   },
   {
-    "id": "105",
+    "id": "104",
     "word": "Bread",
     "word_zh": "麵包",
     "category": "Food",
@@ -840,7 +832,7 @@
     "img": ""
   },
   {
-    "id": "106",
+    "id": "105",
     "word": "Cheese",
     "word_zh": "起司",
     "category": "Food",
@@ -848,7 +840,7 @@
     "img": ""
   },
   {
-    "id": "107",
+    "id": "106",
     "word": "Butter",
     "word_zh": "奶油",
     "category": "Food",
@@ -856,7 +848,7 @@
     "img": ""
   },
   {
-    "id": "108",
+    "id": "107",
     "word": "Yogurt",
     "word_zh": "優格",
     "category": "Food",
@@ -864,7 +856,7 @@
     "img": ""
   },
   {
-    "id": "109",
+    "id": "108",
     "word": "Milk",
     "word_zh": "牛奶",
     "category": "Food",
@@ -872,7 +864,7 @@
     "img": ""
   },
   {
-    "id": "110",
+    "id": "109",
     "word": "Egg",
     "word_zh": "雞蛋",
     "category": "Food",
@@ -880,7 +872,7 @@
     "img": ""
   },
   {
-    "id": "111",
+    "id": "110",
     "word": "Chicken",
     "word_zh": "雞肉",
     "category": "Food",
@@ -888,7 +880,7 @@
     "img": ""
   },
   {
-    "id": "112",
+    "id": "111",
     "word": "Beef",
     "word_zh": "牛肉",
     "category": "Food",
@@ -896,7 +888,7 @@
     "img": ""
   },
   {
-    "id": "113",
+    "id": "112",
     "word": "Pork",
     "word_zh": "豬肉",
     "category": "Food",
@@ -904,7 +896,7 @@
     "img": ""
   },
   {
-    "id": "114",
+    "id": "113",
     "word": "Fish",
     "word_zh": "魚",
     "category": "Food",
@@ -912,7 +904,7 @@
     "img": ""
   },
   {
-    "id": "115",
+    "id": "114",
     "word": "Shrimp",
     "word_zh": "蝦",
     "category": "Food",
@@ -920,7 +912,7 @@
     "img": ""
   },
   {
-    "id": "116",
+    "id": "115",
     "word": "Nuts",
     "word_zh": "堅果",
     "category": "Food",
@@ -928,7 +920,7 @@
     "img": ""
   },
   {
-    "id": "117",
+    "id": "116",
     "word": "Chocolate",
     "word_zh": "巧克力",
     "category": "Dessert",
@@ -936,7 +928,7 @@
     "img": ""
   },
   {
-    "id": "118",
+    "id": "117",
     "word": "Ice Cream",
     "word_zh": "冰淇淋",
     "category": "Dessert",
@@ -944,7 +936,7 @@
     "img": ""
   },
   {
-    "id": "119",
+    "id": "118",
     "word": "Cookies",
     "word_zh": "餅乾",
     "category": "Dessert",
@@ -952,7 +944,7 @@
     "img": ""
   },
   {
-    "id": "120",
+    "id": "119",
     "word": "Cake",
     "word_zh": "蛋糕",
     "category": "Dessert",
@@ -960,7 +952,7 @@
     "img": ""
   },
   {
-    "id": "121",
+    "id": "120",
     "word": "Pie",
     "word_zh": "派",
     "category": "Dessert",
@@ -968,7 +960,7 @@
     "img": ""
   },
   {
-    "id": "122",
+    "id": "121",
     "word": "Candy",
     "word_zh": "糖果",
     "category": "Dessert",
@@ -976,7 +968,7 @@
     "img": ""
   },
   {
-    "id": "123",
+    "id": "122",
     "word": "Popcorn",
     "word_zh": "爆米花",
     "category": "Dessert",
@@ -984,7 +976,7 @@
     "img": ""
   },
   {
-    "id": "124",
+    "id": "123",
     "word": "Chips",
     "word_zh": "薯片",
     "category": "Food",
@@ -992,7 +984,7 @@
     "img": ""
   },
   {
-    "id": "125",
+    "id": "124",
     "word": "Granola",
     "word_zh": "燕麥片",
     "category": "Food",
@@ -1000,7 +992,7 @@
     "img": ""
   },
   {
-    "id": "126",
+    "id": "125",
     "word": "Cereal",
     "word_zh": "穀物",
     "category": "Food",
@@ -1008,7 +1000,7 @@
     "img": ""
   },
   {
-    "id": "127",
+    "id": "126",
     "word": "Honey",
     "word_zh": "蜂蜜",
     "category": "Food",
@@ -1016,7 +1008,7 @@
     "img": ""
   },
   {
-    "id": "128",
+    "id": "127",
     "word": "Jam",
     "word_zh": "果醬",
     "category": "Food",
@@ -1024,7 +1016,7 @@
     "img": ""
   },
   {
-    "id": "129",
+    "id": "128",
     "word": "Hot Dog",
     "word_zh": "熱狗",
     "category": "Food",
@@ -1032,7 +1024,7 @@
     "img": ""
   },
   {
-    "id": "130",
+    "id": "129",
     "word": "Hamburger",
     "word_zh": "漢堡",
     "category": "Food",
@@ -1040,7 +1032,7 @@
     "img": ""
   },
   {
-    "id": "131",
+    "id": "130",
     "word": "Sandwich",
     "word_zh": "三明治",
     "category": "Food",
@@ -1048,7 +1040,7 @@
     "img": ""
   },
   {
-    "id": "132",
+    "id": "131",
     "word": "Taco",
     "word_zh": "塔可",
     "category": "Food",
@@ -1056,7 +1048,7 @@
     "img": ""
   },
   {
-    "id": "133",
+    "id": "132",
     "word": "Pizza",
     "word_zh": "披薩",
     "category": "Food",
@@ -1064,7 +1056,7 @@
     "img": ""
   },
   {
-    "id": "134",
+    "id": "133",
     "word": "Fried Rice",
     "word_zh": "炒飯",
     "category": "Food",
@@ -1072,7 +1064,7 @@
     "img": ""
   },
   {
-    "id": "135",
+    "id": "134",
     "word": "Noodles",
     "word_zh": "麵條",
     "category": "Food",
@@ -1080,7 +1072,7 @@
     "img": ""
   },
   {
-    "id": "136",
+    "id": "135",
     "word": "Sushi",
     "word_zh": "壽司",
     "category": "Food",
@@ -1088,7 +1080,7 @@
     "img": ""
   },
   {
-    "id": "137",
+    "id": "136",
     "word": "Salad",
     "word_zh": "沙拉",
     "category": "Food",
@@ -1096,7 +1088,7 @@
     "img": ""
   },
   {
-    "id": "138",
+    "id": "137",
     "word": "Pudding",
     "word_zh": "布丁",
     "category": "Dessert",
@@ -1104,7 +1096,7 @@
     "img": ""
   },
   {
-    "id": "139",
+    "id": "138",
     "word": "Jelly",
     "word_zh": "果凍",
     "category": "Dessert",
@@ -1112,7 +1104,7 @@
     "img": ""
   },
   {
-    "id": "140",
+    "id": "139",
     "word": "Muffin",
     "word_zh": "鬆餅",
     "category": "Dessert",
@@ -1120,7 +1112,7 @@
     "img": ""
   },
   {
-    "id": "141",
+    "id": "140",
     "word": "Bagel",
     "word_zh": "貝果",
     "category": "Dessert",
@@ -1128,7 +1120,7 @@
     "img": ""
   },
   {
-    "id": "142",
+    "id": "141",
     "word": "Lollipop",
     "word_zh": "棒棒糖",
     "category": "Dessert",
@@ -1136,7 +1128,7 @@
     "img": ""
   },
   {
-    "id": "143",
+    "id": "142",
     "word": "Car",
     "word_zh": "汽車",
     "category": "Transportation",
@@ -1144,7 +1136,7 @@
     "img": ""
   },
   {
-    "id": "144",
+    "id": "143",
     "word": "Bus",
     "word_zh": "公車",
     "category": "Transportation",
@@ -1152,7 +1144,7 @@
     "img": ""
   },
   {
-    "id": "145",
+    "id": "144",
     "word": "Bicycle",
     "word_zh": "自行車",
     "category": "Transportation",
@@ -1160,7 +1152,7 @@
     "img": ""
   },
   {
-    "id": "146",
+    "id": "145",
     "word": "Train",
     "word_zh": "火車",
     "category": "Transportation",
@@ -1168,7 +1160,7 @@
     "img": ""
   },
   {
-    "id": "147",
+    "id": "146",
     "word": "Subway",
     "word_zh": "地鐵",
     "category": "Transportation",
@@ -1176,7 +1168,7 @@
     "img": ""
   },
   {
-    "id": "148",
+    "id": "147",
     "word": "Tram",
     "word_zh": "電車",
     "category": "Transportation",
@@ -1184,7 +1176,7 @@
     "img": ""
   },
   {
-    "id": "149",
+    "id": "148",
     "word": "Airplane",
     "word_zh": "飛機",
     "category": "Transportation",
@@ -1192,7 +1184,7 @@
     "img": ""
   },
   {
-    "id": "150",
+    "id": "149",
     "word": "Helicopter",
     "word_zh": "直升機",
     "category": "Transportation",
@@ -1200,7 +1192,7 @@
     "img": ""
   },
   {
-    "id": "151",
+    "id": "150",
     "word": "Boat",
     "word_zh": "船",
     "category": "Transportation",
@@ -1208,7 +1200,7 @@
     "img": ""
   },
   {
-    "id": "152",
+    "id": "151",
     "word": "Ferry",
     "word_zh": "渡輪",
     "category": "Transportation",
@@ -1216,7 +1208,7 @@
     "img": ""
   },
   {
-    "id": "153",
+    "id": "152",
     "word": "Taxi",
     "word_zh": "計程車",
     "category": "Transportation",
@@ -1224,7 +1216,7 @@
     "img": ""
   },
   {
-    "id": "154",
+    "id": "153",
     "word": "Truck",
     "word_zh": "貨車",
     "category": "Transportation",
@@ -1232,7 +1224,7 @@
     "img": ""
   },
   {
-    "id": "155",
+    "id": "154",
     "word": "Skateboard",
     "word_zh": "滑板",
     "category": "Transportation",
@@ -1240,7 +1232,7 @@
     "img": ""
   },
   {
-    "id": "156",
+    "id": "155",
     "word": "Hot Air Balloon",
     "word_zh": "熱氣球",
     "category": "Transportation",
@@ -1248,7 +1240,7 @@
     "img": ""
   },
   {
-    "id": "157",
+    "id": "156",
     "word": "Submarine",
     "word_zh": "潛艇",
     "category": "Transportation",
@@ -1256,7 +1248,7 @@
     "img": ""
   },
   {
-    "id": "158",
+    "id": "157",
     "word": "Yacht",
     "word_zh": "遊艇",
     "category": "Transportation",
@@ -1264,7 +1256,7 @@
     "img": ""
   },
   {
-    "id": "159",
+    "id": "158",
     "word": "Trolley",
     "word_zh": "電車",
     "category": "Transportation",
@@ -1272,7 +1264,7 @@
     "img": ""
   },
   {
-    "id": "160",
+    "id": "159",
     "word": "Pencil",
     "word_zh": "鉛筆",
     "category": "Everyday Items",
@@ -1280,7 +1272,7 @@
     "img": ""
   },
   {
-    "id": "161",
+    "id": "160",
     "word": "Pen",
     "word_zh": "原子筆",
     "category": "Everyday Items",
@@ -1288,7 +1280,7 @@
     "img": ""
   },
   {
-    "id": "162",
+    "id": "161",
     "word": "Eraser",
     "word_zh": "橡皮擦",
     "category": "Everyday Items",
@@ -1296,7 +1288,7 @@
     "img": ""
   },
   {
-    "id": "163",
+    "id": "162",
     "word": "Notebook",
     "word_zh": "筆記本",
     "category": "Everyday Items",
@@ -1304,7 +1296,7 @@
     "img": ""
   },
   {
-    "id": "164",
+    "id": "163",
     "word": "Paper",
     "word_zh": "紙",
     "category": "Everyday Items",
@@ -1312,7 +1304,7 @@
     "img": ""
   },
   {
-    "id": "165",
+    "id": "164",
     "word": "Binder",
     "word_zh": "夾子",
     "category": "Everyday Items",
@@ -1320,7 +1312,7 @@
     "img": ""
   },
   {
-    "id": "166",
+    "id": "165",
     "word": "Folder",
     "word_zh": "文件夾",
     "category": "Everyday Items",
@@ -1328,7 +1320,7 @@
     "img": ""
   },
   {
-    "id": "167",
+    "id": "166",
     "word": "Ruler",
     "word_zh": "尺",
     "category": "Everyday Items",
@@ -1336,7 +1328,7 @@
     "img": ""
   },
   {
-    "id": "168",
+    "id": "167",
     "word": "Scissors",
     "word_zh": "剪刀",
     "category": "Everyday Items",
@@ -1344,7 +1336,7 @@
     "img": ""
   },
   {
-    "id": "169",
+    "id": "168",
     "word": "Glue",
     "word_zh": "膠水",
     "category": "Everyday Items",
@@ -1352,7 +1344,7 @@
     "img": ""
   },
   {
-    "id": "170",
+    "id": "169",
     "word": "Tape",
     "word_zh": "膠帶",
     "category": "Everyday Items",
@@ -1360,7 +1352,7 @@
     "img": ""
   },
   {
-    "id": "171",
+    "id": "170",
     "word": "Crayons",
     "word_zh": "蠟筆",
     "category": "Everyday Items",
@@ -1368,7 +1360,7 @@
     "img": ""
   },
   {
-    "id": "172",
+    "id": "171",
     "word": "Markers",
     "word_zh": "馬克筆",
     "category": "Everyday Items",
@@ -1376,7 +1368,7 @@
     "img": ""
   },
   {
-    "id": "173",
+    "id": "172",
     "word": "Colored Pencils",
     "word_zh": "彩色鉛筆",
     "category": "Everyday Items",
@@ -1384,7 +1376,7 @@
     "img": ""
   },
   {
-    "id": "174",
+    "id": "173",
     "word": "Sharpener",
     "word_zh": "削鉛筆機",
     "category": "Everyday Items",
@@ -1392,7 +1384,7 @@
     "img": ""
   },
   {
-    "id": "175",
+    "id": "174",
     "word": "Chalk",
     "word_zh": "粉筆",
     "category": "Everyday Items",
@@ -1400,7 +1392,7 @@
     "img": ""
   },
   {
-    "id": "176",
+    "id": "175",
     "word": "Whiteboard",
     "word_zh": "白板",
     "category": "Everyday Items",
@@ -1408,7 +1400,7 @@
     "img": ""
   },
   {
-    "id": "177",
+    "id": "176",
     "word": "Chalkboard",
     "word_zh": "黑板",
     "category": "Everyday Items",
@@ -1416,7 +1408,7 @@
     "img": ""
   },
   {
-    "id": "178",
+    "id": "177",
     "word": "Desk",
     "word_zh": "桌子",
     "category": "Everyday Items",
@@ -1424,7 +1416,7 @@
     "img": ""
   },
   {
-    "id": "179",
+    "id": "178",
     "word": "Chair",
     "word_zh": "椅子",
     "category": "Everyday Items",
@@ -1432,7 +1424,7 @@
     "img": ""
   },
   {
-    "id": "180",
+    "id": "179",
     "word": "Backpack",
     "word_zh": "背包",
     "category": "Everyday Items",
@@ -1440,7 +1432,7 @@
     "img": ""
   },
   {
-    "id": "181",
+    "id": "180",
     "word": "Lunchbox",
     "word_zh": "午餐盒",
     "category": "Everyday Items",
@@ -1448,7 +1440,7 @@
     "img": ""
   },
   {
-    "id": "182",
+    "id": "181",
     "word": "Water Bottle",
     "word_zh": "水壺",
     "category": "Everyday Items",
@@ -1456,7 +1448,7 @@
     "img": ""
   },
   {
-    "id": "183",
+    "id": "182",
     "word": "Name Tag",
     "word_zh": "名牌",
     "category": "Everyday Items",
@@ -1464,7 +1456,7 @@
     "img": ""
   },
   {
-    "id": "184",
+    "id": "183",
     "word": "Sticky Notes",
     "word_zh": "便利貼",
     "category": "Everyday Items",
@@ -1472,7 +1464,7 @@
     "img": ""
   },
   {
-    "id": "185",
+    "id": "184",
     "word": "Clipboard",
     "word_zh": "夾板",
     "category": "Everyday Items",
@@ -1480,7 +1472,7 @@
     "img": ""
   },
   {
-    "id": "186",
+    "id": "185",
     "word": "Calculator",
     "word_zh": "計算機",
     "category": "Everyday Items",
@@ -1488,7 +1480,7 @@
     "img": ""
   },
   {
-    "id": "187",
+    "id": "186",
     "word": "Pencil Case",
     "word_zh": "鉛筆盒",
     "category": "Everyday Items",
@@ -1496,7 +1488,7 @@
     "img": ""
   },
   {
-    "id": "188",
+    "id": "187",
     "word": "Index Cards",
     "word_zh": "索引卡",
     "category": "Everyday Items",
@@ -1504,7 +1496,7 @@
     "img": ""
   },
   {
-    "id": "189",
+    "id": "188",
     "word": "Sticky Tack",
     "word_zh": "黏土",
     "category": "Everyday Items",
@@ -1512,7 +1504,7 @@
     "img": ""
   },
   {
-    "id": "190",
+    "id": "189",
     "word": "Stapler",
     "word_zh": "釘書機",
     "category": "Everyday Items",
@@ -1520,7 +1512,7 @@
     "img": ""
   },
   {
-    "id": "191",
+    "id": "190",
     "word": "Rubber Band",
     "word_zh": "橡皮筋",
     "category": "Everyday Items",
@@ -1528,7 +1520,7 @@
     "img": ""
   },
   {
-    "id": "192",
+    "id": "191",
     "word": "Pin",
     "word_zh": "大頭針",
     "category": "Everyday Items",
@@ -1536,7 +1528,7 @@
     "img": ""
   },
   {
-    "id": "193",
+    "id": "192",
     "word": "Globe",
     "word_zh": "地球儀",
     "category": "Everyday Items",
@@ -1544,7 +1536,7 @@
     "img": ""
   },
   {
-    "id": "194",
+    "id": "193",
     "word": "Map",
     "word_zh": "地圖",
     "category": "Everyday Items",
@@ -1552,7 +1544,7 @@
     "img": ""
   },
   {
-    "id": "195",
+    "id": "194",
     "word": "Book",
     "word_zh": "書本",
     "category": "Everyday Items",
@@ -1560,7 +1552,7 @@
     "img": ""
   },
   {
-    "id": "196",
+    "id": "195",
     "word": "Textbook",
     "word_zh": "教科書",
     "category": "Everyday Items",
@@ -1568,7 +1560,7 @@
     "img": ""
   },
   {
-    "id": "197",
+    "id": "196",
     "word": "Workbook",
     "word_zh": "練習本",
     "category": "Everyday Items",
@@ -1576,7 +1568,7 @@
     "img": ""
   },
   {
-    "id": "198",
+    "id": "197",
     "word": "Handout",
     "word_zh": "講義",
     "category": "Everyday Items",
@@ -1584,7 +1576,7 @@
     "img": ""
   },
   {
-    "id": "199",
+    "id": "198",
     "word": "Pencil Sharpener",
     "word_zh": "鉛筆刀",
     "category": "Everyday Items",
@@ -1592,7 +1584,7 @@
     "img": ""
   },
   {
-    "id": "200",
+    "id": "199",
     "word": "Notebook Divider",
     "word_zh": "分隔頁",
     "category": "Everyday Items",
@@ -1600,7 +1592,7 @@
     "img": ""
   },
   {
-    "id": "201",
+    "id": "200",
     "word": "Art Supplies",
     "word_zh": "美術用品",
     "category": "Everyday Items",
@@ -1608,7 +1600,7 @@
     "img": ""
   },
   {
-    "id": "202",
+    "id": "201",
     "word": "Paint",
     "word_zh": "顏料",
     "category": "Everyday Items",
@@ -1616,7 +1608,7 @@
     "img": ""
   },
   {
-    "id": "203",
+    "id": "202",
     "word": "Brush",
     "word_zh": "畫筆",
     "category": "Everyday Items",
@@ -1624,7 +1616,7 @@
     "img": ""
   },
   {
-    "id": "204",
+    "id": "203",
     "word": "Canvas",
     "word_zh": "畫布",
     "category": "Everyday Items",
@@ -1632,7 +1624,7 @@
     "img": ""
   },
   {
-    "id": "205",
+    "id": "204",
     "word": "Watercolor",
     "word_zh": "水彩",
     "category": "Everyday Items",
@@ -1640,7 +1632,7 @@
     "img": ""
   },
   {
-    "id": "206",
+    "id": "205",
     "word": "Craft Paper",
     "word_zh": "手工紙",
     "category": "Everyday Items",
@@ -1648,7 +1640,7 @@
     "img": ""
   },
   {
-    "id": "207",
+    "id": "206",
     "word": "Origami Paper",
     "word_zh": "摺紙",
     "category": "Everyday Items",
@@ -1656,7 +1648,7 @@
     "img": ""
   },
   {
-    "id": "208",
+    "id": "207",
     "word": "Masking Tape",
     "word_zh": "美工膠帶",
     "category": "Everyday Items",
@@ -1664,7 +1656,7 @@
     "img": ""
   },
   {
-    "id": "209",
+    "id": "208",
     "word": "Whiteout",
     "word_zh": "修正液",
     "category": "Everyday Items",
@@ -1672,7 +1664,7 @@
     "img": ""
   },
   {
-    "id": "210",
+    "id": "209",
     "word": "Postcard",
     "word_zh": "明信片",
     "category": "Everyday Items",
@@ -1680,7 +1672,7 @@
     "img": ""
   },
   {
-    "id": "211",
+    "id": "210",
     "word": "Envelope",
     "word_zh": "信封",
     "category": "Everyday Items",
@@ -1688,7 +1680,7 @@
     "img": ""
   },
   {
-    "id": "212",
+    "id": "211",
     "word": "Letter Opener",
     "word_zh": "開信刀",
     "category": "Everyday Items",
@@ -1696,7 +1688,7 @@
     "img": ""
   },
   {
-    "id": "213",
+    "id": "212",
     "word": "Paper Clips",
     "word_zh": "紙夾",
     "category": "Everyday Items",
@@ -1704,7 +1696,7 @@
     "img": ""
   },
   {
-    "id": "214",
+    "id": "213",
     "word": "Binder Clips",
     "word_zh": "夾子",
     "category": "Everyday Items",
@@ -1712,7 +1704,7 @@
     "img": ""
   },
   {
-    "id": "215",
+    "id": "214",
     "word": "Thumbtacks",
     "word_zh": "圖釘",
     "category": "Everyday Items",
@@ -1720,7 +1712,7 @@
     "img": ""
   },
   {
-    "id": "216",
+    "id": "215",
     "word": "Safety Scissors",
     "word_zh": "安全剪刀",
     "category": "Everyday Items",
@@ -1728,7 +1720,7 @@
     "img": ""
   },
   {
-    "id": "217",
+    "id": "216",
     "word": "Tape Measure",
     "word_zh": "捲尺",
     "category": "Everyday Items",
@@ -1736,7 +1728,7 @@
     "img": ""
   },
   {
-    "id": "218",
+    "id": "217",
     "word": "Stickers",
     "word_zh": "貼紙",
     "category": "Everyday Items",
@@ -1744,7 +1736,7 @@
     "img": ""
   },
   {
-    "id": "219",
+    "id": "218",
     "word": "Pencil Grip",
     "word_zh": "握筆器",
     "category": "Everyday Items",
@@ -1752,7 +1744,7 @@
     "img": ""
   },
   {
-    "id": "220",
+    "id": "219",
     "word": "Homework Folder",
     "word_zh": "作業夾",
     "category": "Everyday Items",
@@ -1760,7 +1752,7 @@
     "img": ""
   },
   {
-    "id": "221",
+    "id": "220",
     "word": "Glitter",
     "word_zh": "亮片",
     "category": "Everyday Items",
@@ -1768,7 +1760,7 @@
     "img": ""
   },
   {
-    "id": "222",
+    "id": "221",
     "word": "Play Dough",
     "word_zh": "橡皮泥",
     "category": "Everyday Items",
@@ -1776,7 +1768,7 @@
     "img": ""
   },
   {
-    "id": "223",
+    "id": "222",
     "word": "Scotch Tape",
     "word_zh": "透明膠帶",
     "category": "Everyday Items",
@@ -1784,7 +1776,7 @@
     "img": ""
   },
   {
-    "id": "224",
+    "id": "223",
     "word": "Craft Scissors",
     "word_zh": "手工剪刀",
     "category": "Everyday Items",
@@ -1792,7 +1784,7 @@
     "img": ""
   },
   {
-    "id": "225",
+    "id": "224",
     "word": "Pencil Holder",
     "word_zh": "鉛筆筒",
     "category": "Everyday Items",
@@ -1800,7 +1792,7 @@
     "img": ""
   },
   {
-    "id": "226",
+    "id": "225",
     "word": "Sponge",
     "word_zh": "海綿",
     "category": "Everyday Items",
@@ -1808,7 +1800,7 @@
     "img": ""
   },
   {
-    "id": "227",
+    "id": "226",
     "word": "Sketchbook",
     "word_zh": "素描本",
     "category": "Everyday Items",
@@ -1816,7 +1808,7 @@
     "img": ""
   },
   {
-    "id": "228",
+    "id": "227",
     "word": "Magnet",
     "word_zh": "磁鐵",
     "category": "Everyday Items",
@@ -1824,7 +1816,7 @@
     "img": ""
   },
   {
-    "id": "229",
+    "id": "228",
     "word": "Chalk Holder",
     "word_zh": "粉筆盒",
     "category": "Everyday Items",
@@ -1832,7 +1824,7 @@
     "img": ""
   },
   {
-    "id": "230",
+    "id": "229",
     "word": "Keychain",
     "word_zh": "鑰匙圈",
     "category": "Everyday Items",
@@ -1840,7 +1832,7 @@
     "img": ""
   },
   {
-    "id": "231",
+    "id": "230",
     "word": "Nail File",
     "word_zh": "指甲銼",
     "category": "Everyday Items",
@@ -1848,7 +1840,7 @@
     "img": ""
   },
   {
-    "id": "232",
+    "id": "231",
     "word": "Mirror",
     "word_zh": "鏡子",
     "category": "Everyday Items",
@@ -1856,7 +1848,7 @@
     "img": ""
   },
   {
-    "id": "233",
+    "id": "232",
     "word": "Toothbrush",
     "word_zh": "牙刷",
     "category": "Everyday Items",
@@ -1864,7 +1856,7 @@
     "img": ""
   },
   {
-    "id": "234",
+    "id": "233",
     "word": "Toothpaste",
     "word_zh": "牙膏",
     "category": "Everyday Items",
@@ -1872,7 +1864,7 @@
     "img": ""
   },
   {
-    "id": "235",
+    "id": "234",
     "word": "Comb",
     "word_zh": "梳子",
     "category": "Everyday Items",
@@ -1880,7 +1872,7 @@
     "img": ""
   },
   {
-    "id": "236",
+    "id": "235",
     "word": "Hairbrush",
     "word_zh": "髮刷",
     "category": "Everyday Items",
@@ -1888,7 +1880,7 @@
     "img": ""
   },
   {
-    "id": "237",
+    "id": "236",
     "word": "Soap",
     "word_zh": "肥皂",
     "category": "Everyday Items",
@@ -1896,7 +1888,7 @@
     "img": ""
   },
   {
-    "id": "238",
+    "id": "237",
     "word": "Tissue",
     "word_zh": "紙巾",
     "category": "Everyday Items",
@@ -1904,7 +1896,7 @@
     "img": ""
   },
   {
-    "id": "239",
+    "id": "238",
     "word": "Hand Sanitizer",
     "word_zh": "洗手液",
     "category": "Everyday Items",
@@ -1912,7 +1904,7 @@
     "img": ""
   },
   {
-    "id": "240",
+    "id": "239",
     "word": "First Aid Kit",
     "word_zh": "急救箱",
     "category": "Everyday Items",
@@ -1920,7 +1912,7 @@
     "img": ""
   },
   {
-    "id": "241",
+    "id": "240",
     "word": "Tree",
     "word_zh": "樹",
     "category": "Nature",
@@ -1928,7 +1920,7 @@
     "img": ""
   },
   {
-    "id": "242",
+    "id": "241",
     "word": "Flower",
     "word_zh": "花",
     "category": "Nature",
@@ -1936,7 +1928,7 @@
     "img": ""
   },
   {
-    "id": "243",
+    "id": "242",
     "word": "Grass",
     "word_zh": "草",
     "category": "Nature",
@@ -1944,7 +1936,7 @@
     "img": ""
   },
   {
-    "id": "244",
+    "id": "243",
     "word": "Leaf",
     "word_zh": "葉子",
     "category": "Nature",
@@ -1952,7 +1944,7 @@
     "img": ""
   },
   {
-    "id": "245",
+    "id": "244",
     "word": "Rock",
     "word_zh": "石頭",
     "category": "Nature",
@@ -1960,7 +1952,7 @@
     "img": ""
   },
   {
-    "id": "246",
+    "id": "245",
     "word": "Stone",
     "word_zh": "小石",
     "category": "Nature",
@@ -1968,7 +1960,7 @@
     "img": ""
   },
   {
-    "id": "247",
+    "id": "246",
     "word": "Soil",
     "word_zh": "土壤",
     "category": "Nature",
@@ -1976,7 +1968,7 @@
     "img": ""
   },
   {
-    "id": "248",
+    "id": "247",
     "word": "Sand",
     "word_zh": "沙子",
     "category": "Nature",
@@ -1984,7 +1976,7 @@
     "img": ""
   },
   {
-    "id": "249",
+    "id": "248",
     "word": "Water",
     "word_zh": "水",
     "category": "Nature",
@@ -1992,7 +1984,7 @@
     "img": ""
   },
   {
-    "id": "250",
+    "id": "249",
     "word": "River",
     "word_zh": "河",
     "category": "Nature",
@@ -2000,7 +1992,7 @@
     "img": ""
   },
   {
-    "id": "251",
+    "id": "250",
     "word": "Lake",
     "word_zh": "湖",
     "category": "Nature",
@@ -2008,7 +2000,7 @@
     "img": ""
   },
   {
-    "id": "252",
+    "id": "251",
     "word": "Ocean",
     "word_zh": "海洋",
     "category": "Nature",
@@ -2016,7 +2008,7 @@
     "img": ""
   },
   {
-    "id": "253",
+    "id": "252",
     "word": "Mountain",
     "word_zh": "山",
     "category": "Nature",
@@ -2024,7 +2016,7 @@
     "img": ""
   },
   {
-    "id": "254",
+    "id": "253",
     "word": "Sky",
     "word_zh": "天空",
     "category": "Nature",
@@ -2032,7 +2024,7 @@
     "img": ""
   },
   {
-    "id": "255",
+    "id": "254",
     "word": "Cloud",
     "word_zh": "雲",
     "category": "Nature",
@@ -2040,7 +2032,7 @@
     "img": ""
   },
   {
-    "id": "256",
+    "id": "255",
     "word": "Sun",
     "word_zh": "太陽",
     "category": "Nature",
@@ -2048,7 +2040,7 @@
     "img": ""
   },
   {
-    "id": "257",
+    "id": "256",
     "word": "Moon",
     "word_zh": "月亮",
     "category": "Nature",
@@ -2056,7 +2048,7 @@
     "img": ""
   },
   {
-    "id": "258",
+    "id": "257",
     "word": "Star",
     "word_zh": "星星",
     "category": "Nature",
@@ -2064,7 +2056,7 @@
     "img": ""
   },
   {
-    "id": "259",
+    "id": "258",
     "word": "Wind",
     "word_zh": "風",
     "category": "Nature",
@@ -2072,7 +2064,7 @@
     "img": ""
   },
   {
-    "id": "260",
+    "id": "259",
     "word": "Rain",
     "word_zh": "雨",
     "category": "Nature",
@@ -2080,7 +2072,7 @@
     "img": ""
   },
   {
-    "id": "261",
+    "id": "260",
     "word": "Snow",
     "word_zh": "雪",
     "category": "Nature",
@@ -2088,7 +2080,7 @@
     "img": ""
   },
   {
-    "id": "262",
+    "id": "261",
     "word": "Rainbow",
     "word_zh": "彩虹",
     "category": "Nature",
@@ -2096,7 +2088,7 @@
     "img": ""
   },
   {
-    "id": "263",
+    "id": "262",
     "word": "Bird",
     "word_zh": "鳥",
     "category": "Nature",
@@ -2104,7 +2096,7 @@
     "img": ""
   },
   {
-    "id": "264",
+    "id": "263",
     "word": "Butterfly",
     "word_zh": "蝴蝶",
     "category": "Nature",
@@ -2112,7 +2104,7 @@
     "img": ""
   },
   {
-    "id": "265",
+    "id": "264",
     "word": "Bee",
     "word_zh": "蜜蜂",
     "category": "Nature",
@@ -2120,7 +2112,7 @@
     "img": ""
   },
   {
-    "id": "266",
+    "id": "265",
     "word": "Ant",
     "word_zh": "螞蟻",
     "category": "Nature",
@@ -2128,7 +2120,7 @@
     "img": ""
   },
   {
-    "id": "267",
+    "id": "266",
     "word": "Spider",
     "word_zh": "蜘蛛",
     "category": "Nature",
@@ -2136,7 +2128,7 @@
     "img": ""
   },
   {
-    "id": "268",
+    "id": "267",
     "word": "Insect",
     "word_zh": "昆蟲",
     "category": "Nature",
@@ -2144,7 +2136,7 @@
     "img": ""
   },
   {
-    "id": "269",
+    "id": "268",
     "word": "Fish",
     "word_zh": "魚",
     "category": "Nature",
@@ -2152,7 +2144,7 @@
     "img": ""
   },
   {
-    "id": "270",
+    "id": "269",
     "word": "Frog",
     "word_zh": "青蛙",
     "category": "Nature",
@@ -2160,7 +2152,7 @@
     "img": ""
   },
   {
-    "id": "271",
+    "id": "270",
     "word": "Turtle",
     "word_zh": "烏龜",
     "category": "Nature",
@@ -2168,7 +2160,7 @@
     "img": ""
   },
   {
-    "id": "272",
+    "id": "271",
     "word": "Squirrel",
     "word_zh": "松鼠",
     "category": "Nature",
@@ -2176,7 +2168,7 @@
     "img": ""
   },
   {
-    "id": "273",
+    "id": "272",
     "word": "Deer",
     "word_zh": "鹿",
     "category": "Nature",
@@ -2184,7 +2176,7 @@
     "img": ""
   },
   {
-    "id": "274",
+    "id": "273",
     "word": "Rabbit",
     "word_zh": "兔子",
     "category": "Nature",
@@ -2192,7 +2184,7 @@
     "img": ""
   },
   {
-    "id": "275",
+    "id": "274",
     "word": "Horse",
     "word_zh": "馬",
     "category": "Nature",
@@ -2200,7 +2192,7 @@
     "img": ""
   },
   {
-    "id": "276",
+    "id": "275",
     "word": "Caterpillar",
     "word_zh": "毛毛蟲",
     "category": "Nature",
@@ -2208,7 +2200,7 @@
     "img": ""
   },
   {
-    "id": "277",
+    "id": "276",
     "word": "Ladybug",
     "word_zh": "瓢蟲",
     "category": "Nature",
@@ -2216,7 +2208,7 @@
     "img": ""
   },
   {
-    "id": "278",
+    "id": "277",
     "word": "Snail",
     "word_zh": "蝸牛",
     "category": "Nature",
@@ -2224,7 +2216,7 @@
     "img": ""
   },
   {
-    "id": "279",
+    "id": "278",
     "word": "Shell",
     "word_zh": "貝殼",
     "category": "Nature",
@@ -2232,7 +2224,7 @@
     "img": ""
   },
   {
-    "id": "280",
+    "id": "279",
     "word": "Acorn",
     "word_zh": "橡果",
     "category": "Nature",
@@ -2240,7 +2232,7 @@
     "img": ""
   },
   {
-    "id": "281",
+    "id": "280",
     "word": "Pine Cone",
     "word_zh": "松果",
     "category": "Nature",
@@ -2248,7 +2240,7 @@
     "img": ""
   },
   {
-    "id": "282",
+    "id": "281",
     "word": "Daisy",
     "word_zh": "雛菊",
     "category": "Nature",
@@ -2256,7 +2248,7 @@
     "img": ""
   },
   {
-    "id": "283",
+    "id": "282",
     "word": "Cactus",
     "word_zh": "仙人掌",
     "category": "Nature",
@@ -2264,7 +2256,7 @@
     "img": ""
   },
   {
-    "id": "284",
+    "id": "283",
     "word": "Mushroom",
     "word_zh": "蘑菇",
     "category": "Nature",
@@ -2272,7 +2264,7 @@
     "img": ""
   },
   {
-    "id": "285",
+    "id": "284",
     "word": "Root",
     "word_zh": "根",
     "category": "Nature",
@@ -2280,7 +2272,7 @@
     "img": ""
   },
   {
-    "id": "286",
+    "id": "285",
     "word": "Fruit",
     "word_zh": "水果",
     "category": "Nature",
@@ -2288,7 +2280,7 @@
     "img": ""
   },
   {
-    "id": "287",
+    "id": "286",
     "word": "Vegetable",
     "word_zh": "蔬菜",
     "category": "Nature",
@@ -2296,7 +2288,7 @@
     "img": ""
   },
   {
-    "id": "288",
+    "id": "287",
     "word": "Nut",
     "word_zh": "堅果",
     "category": "Nature",
@@ -2304,7 +2296,7 @@
     "img": ""
   },
   {
-    "id": "289",
+    "id": "288",
     "word": "Seed",
     "word_zh": "種子",
     "category": "Nature",
@@ -2312,7 +2304,7 @@
     "img": ""
   },
   {
-    "id": "290",
+    "id": "289",
     "word": "Pond",
     "word_zh": "池塘",
     "category": "Nature",
@@ -2320,7 +2312,7 @@
     "img": ""
   },
   {
-    "id": "291",
+    "id": "290",
     "word": "Stream",
     "word_zh": "小溪",
     "category": "Nature",
@@ -2328,7 +2320,7 @@
     "img": ""
   },
   {
-    "id": "292",
+    "id": "291",
     "word": "Forest",
     "word_zh": "森林",
     "category": "Nature",
@@ -2336,7 +2328,7 @@
     "img": ""
   },
   {
-    "id": "293",
+    "id": "292",
     "word": "Desert",
     "word_zh": "沙漠",
     "category": "Nature",
@@ -2344,7 +2336,7 @@
     "img": ""
   },
   {
-    "id": "294",
+    "id": "293",
     "word": "Wetland",
     "word_zh": "濕地",
     "category": "Nature",
@@ -2352,7 +2344,7 @@
     "img": ""
   },
   {
-    "id": "295",
+    "id": "294",
     "word": "Field",
     "word_zh": "田野",
     "category": "Nature",
@@ -2360,7 +2352,7 @@
     "img": ""
   },
   {
-    "id": "296",
+    "id": "295",
     "word": "Marsh",
     "word_zh": "沼澤",
     "category": "Nature",
@@ -2368,7 +2360,7 @@
     "img": ""
   },
   {
-    "id": "297",
+    "id": "296",
     "word": "Glacier",
     "word_zh": "冰川",
     "category": "Nature",
@@ -2376,7 +2368,7 @@
     "img": ""
   },
   {
-    "id": "298",
+    "id": "297",
     "word": "Volcano",
     "word_zh": "火山",
     "category": "Nature",
@@ -2384,7 +2376,7 @@
     "img": ""
   },
   {
-    "id": "299",
+    "id": "298",
     "word": "Earth",
     "word_zh": "地球",
     "category": "Nature",
@@ -2392,7 +2384,7 @@
     "img": ""
   },
   {
-    "id": "300",
+    "id": "299",
     "word": "Tide",
     "word_zh": "潮汐",
     "category": "Nature",
@@ -2400,7 +2392,7 @@
     "img": ""
   },
   {
-    "id": "301",
+    "id": "300",
     "word": "Wave",
     "word_zh": "波浪",
     "category": "Nature",
@@ -2408,7 +2400,7 @@
     "img": ""
   },
   {
-    "id": "302",
+    "id": "301",
     "word": "Fossil",
     "word_zh": "化石",
     "category": "Nature",
@@ -2416,7 +2408,7 @@
     "img": ""
   },
   {
-    "id": "303",
+    "id": "302",
     "word": "Cave",
     "word_zh": "洞穴",
     "category": "Nature",
@@ -2424,7 +2416,7 @@
     "img": ""
   },
   {
-    "id": "304",
+    "id": "303",
     "word": "Cliff",
     "word_zh": "懸崖",
     "category": "Nature",
@@ -2432,7 +2424,7 @@
     "img": ""
   },
   {
-    "id": "305",
+    "id": "304",
     "word": "Plateau",
     "word_zh": "高原",
     "category": "Nature",
@@ -2440,7 +2432,7 @@
     "img": ""
   },
   {
-    "id": "306",
+    "id": "305",
     "word": "Savanna",
     "word_zh": "大草原",
     "category": "Nature",
@@ -2448,7 +2440,7 @@
     "img": ""
   },
   {
-    "id": "307",
+    "id": "306",
     "word": "Jungle",
     "word_zh": "叢林",
     "category": "Nature",
@@ -2456,7 +2448,7 @@
     "img": ""
   },
   {
-    "id": "308",
+    "id": "307",
     "word": "Meadow",
     "word_zh": "草地",
     "category": "Nature",
@@ -2464,7 +2456,7 @@
     "img": ""
   },
   {
-    "id": "309",
+    "id": "308",
     "word": "Orchard",
     "word_zh": "果樹園",
     "category": "Nature",
@@ -2472,7 +2464,7 @@
     "img": ""
   },
   {
-    "id": "310",
+    "id": "309",
     "word": "Hill",
     "word_zh": "小山",
     "category": "Nature",
@@ -2480,7 +2472,7 @@
     "img": ""
   },
   {
-    "id": "311",
+    "id": "310",
     "word": "Geyser",
     "word_zh": "噴泉",
     "category": "Nature",
@@ -2488,7 +2480,7 @@
     "img": ""
   },
   {
-    "id": "312",
+    "id": "311",
     "word": "Coral",
     "word_zh": "珊瑚",
     "category": "Nature",
@@ -2496,7 +2488,7 @@
     "img": ""
   },
   {
-    "id": "313",
+    "id": "312",
     "word": "Windmill",
     "word_zh": "風車",
     "category": "Nature",
@@ -2504,7 +2496,7 @@
     "img": ""
   },
   {
-    "id": "314",
+    "id": "313",
     "word": "Plate",
     "word_zh": "盤子",
     "category": "Tableware",
@@ -2512,7 +2504,7 @@
     "img": ""
   },
   {
-    "id": "315",
+    "id": "314",
     "word": "Bowl",
     "word_zh": "碗",
     "category": "Tableware",
@@ -2520,7 +2512,7 @@
     "img": ""
   },
   {
-    "id": "316",
+    "id": "315",
     "word": "Cup",
     "word_zh": "杯子",
     "category": "Tableware",
@@ -2528,7 +2520,7 @@
     "img": ""
   },
   {
-    "id": "317",
+    "id": "316",
     "word": "Glass",
     "word_zh": "玻璃杯",
     "category": "Tableware",
@@ -2536,7 +2528,7 @@
     "img": ""
   },
   {
-    "id": "318",
+    "id": "317",
     "word": "Spoon",
     "word_zh": "湯匙",
     "category": "Tableware",
@@ -2544,7 +2536,7 @@
     "img": ""
   },
   {
-    "id": "319",
+    "id": "318",
     "word": "Fork",
     "word_zh": "叉子",
     "category": "Tableware",
@@ -2552,7 +2544,7 @@
     "img": ""
   },
   {
-    "id": "320",
+    "id": "319",
     "word": "Knife",
     "word_zh": "刀子",
     "category": "Tableware",
@@ -2560,7 +2552,7 @@
     "img": ""
   },
   {
-    "id": "321",
+    "id": "320",
     "word": "Chopsticks",
     "word_zh": "筷子",
     "category": "Tableware",
@@ -2568,7 +2560,7 @@
     "img": ""
   },
   {
-    "id": "322",
+    "id": "321",
     "word": "Napkin",
     "word_zh": "餐巾紙",
     "category": "Tableware",
@@ -2576,7 +2568,7 @@
     "img": ""
   },
   {
-    "id": "323",
+    "id": "322",
     "word": "Table",
     "word_zh": "桌子",
     "category": "Tableware",
@@ -2584,7 +2576,7 @@
     "img": ""
   },
   {
-    "id": "324",
+    "id": "323",
     "word": "Chair",
     "word_zh": "椅子",
     "category": "Tableware",
@@ -2592,7 +2584,7 @@
     "img": ""
   },
   {
-    "id": "325",
+    "id": "324",
     "word": "Tray",
     "word_zh": "托盤",
     "category": "Tableware",
@@ -2600,7 +2592,7 @@
     "img": ""
   },
   {
-    "id": "326",
+    "id": "325",
     "word": "Saucer",
     "word_zh": "碟子",
     "category": "Tableware",
@@ -2608,7 +2600,7 @@
     "img": ""
   },
   {
-    "id": "327",
+    "id": "326",
     "word": "Pitcher",
     "word_zh": "壺",
     "category": "Tableware",
@@ -2616,7 +2608,7 @@
     "img": ""
   },
   {
-    "id": "328",
+    "id": "327",
     "word": "Cutting Board",
     "word_zh": "砧板",
     "category": "Tableware",
@@ -2624,7 +2616,7 @@
     "img": ""
   },
   {
-    "id": "329",
+    "id": "328",
     "word": "Blender",
     "word_zh": "攪拌機",
     "category": "Tableware",
@@ -2632,7 +2624,7 @@
     "img": ""
   },
   {
-    "id": "330",
+    "id": "329",
     "word": "Microwave",
     "word_zh": "微波爐",
     "category": "Tableware",
@@ -2640,7 +2632,7 @@
     "img": ""
   },
   {
-    "id": "331",
+    "id": "330",
     "word": "Oven",
     "word_zh": "烤箱",
     "category": "Tableware",
@@ -2648,7 +2640,7 @@
     "img": ""
   },
   {
-    "id": "332",
+    "id": "331",
     "word": "Pot",
     "word_zh": "鍋",
     "category": "Tableware",
@@ -2656,7 +2648,7 @@
     "img": ""
   },
   {
-    "id": "333",
+    "id": "332",
     "word": "Pan",
     "word_zh": "平底鍋",
     "category": "Tableware",
@@ -2664,7 +2656,7 @@
     "img": ""
   },
   {
-    "id": "334",
+    "id": "333",
     "word": "Ladle",
     "word_zh": "長柄湯勺",
     "category": "Tableware",
@@ -2672,7 +2664,7 @@
     "img": ""
   },
   {
-    "id": "335",
+    "id": "334",
     "word": "Tongs",
     "word_zh": "夾子",
     "category": "Tableware",
@@ -2680,7 +2672,7 @@
     "img": ""
   },
   {
-    "id": "336",
+    "id": "335",
     "word": "Whisk",
     "word_zh": "打蛋器",
     "category": "Tableware",
@@ -2688,7 +2680,7 @@
     "img": ""
   },
   {
-    "id": "337",
+    "id": "336",
     "word": "Rolling Pin",
     "word_zh": "擀麵棍",
     "category": "Tableware",
@@ -2696,7 +2688,7 @@
     "img": ""
   },
   {
-    "id": "338",
+    "id": "337",
     "word": "Baking Sheet",
     "word_zh": "烤盤",
     "category": "Tableware",
@@ -2704,7 +2696,7 @@
     "img": ""
   },
   {
-    "id": "339",
+    "id": "338",
     "word": "Doll",
     "word_zh": "洋娃娃",
     "category": "Toy",
@@ -2712,7 +2704,7 @@
     "img": ""
   },
   {
-    "id": "340",
+    "id": "339",
     "word": "Teddy Bear",
     "word_zh": "泰迪熊",
     "category": "Toy",
@@ -2720,7 +2712,7 @@
     "img": ""
   },
   {
-    "id": "341",
+    "id": "340",
     "word": "Ball",
     "word_zh": "球",
     "category": "Toy",
@@ -2728,7 +2720,7 @@
     "img": ""
   },
   {
-    "id": "342",
+    "id": "341",
     "word": "Puzzle",
     "word_zh": "拼圖",
     "category": "Toy",
@@ -2736,7 +2728,7 @@
     "img": ""
   },
   {
-    "id": "343",
+    "id": "342",
     "word": "Building Blocks",
     "word_zh": "積木",
     "category": "Toy",
@@ -2744,7 +2736,7 @@
     "img": ""
   },
   {
-    "id": "344",
+    "id": "343",
     "word": "Kite",
     "word_zh": "風箏",
     "category": "Toy",
@@ -2752,7 +2744,7 @@
     "img": ""
   },
   {
-    "id": "345",
+    "id": "344",
     "word": "Yo-Yo",
     "word_zh": "溜溜球",
     "category": "Toy",
@@ -2760,7 +2752,7 @@
     "img": ""
   },
   {
-    "id": "346",
+    "id": "345",
     "word": "Jump Rope",
     "word_zh": "跳繩",
     "category": "Toy",
@@ -2768,7 +2760,7 @@
     "img": ""
   },
   {
-    "id": "347",
+    "id": "346",
     "word": "Game Console",
     "word_zh": "遊戲機",
     "category": "Toy",
@@ -2776,7 +2768,7 @@
     "img": ""
   },
   {
-    "id": "348",
+    "id": "347",
     "word": "Board Game",
     "word_zh": "桌遊",
     "category": "Toy",
@@ -2784,7 +2776,7 @@
     "img": ""
   },
   {
-    "id": "349",
+    "id": "348",
     "word": "Plush Toy",
     "word_zh": "毛絨玩具",
     "category": "Toy",
@@ -2792,7 +2784,7 @@
     "img": ""
   },
   {
-    "id": "350",
+    "id": "349",
     "word": "Marbles",
     "word_zh": "彈珠",
     "category": "Toy",
@@ -2800,7 +2792,7 @@
     "img": ""
   },
   {
-    "id": "351",
+    "id": "350",
     "word": "Hula Hoop",
     "word_zh": "呼啦圈",
     "category": "Toy",
@@ -2808,7 +2800,7 @@
     "img": ""
   },
   {
-    "id": "352",
+    "id": "351",
     "word": "Toy Phone",
     "word_zh": "玩具電話",
     "category": "Toy",
@@ -2816,7 +2808,7 @@
     "img": ""
   },
   {
-    "id": "353",
+    "id": "352",
     "word": "Magic Set",
     "word_zh": "魔術道具",
     "category": "Toy",
@@ -2824,7 +2816,7 @@
     "img": ""
   },
   {
-    "id": "354",
+    "id": "353",
     "word": "Bouncing Ball",
     "word_zh": "彈跳球",
     "category": "Toy",
@@ -2832,7 +2824,7 @@
     "img": ""
   },
   {
-    "id": "355",
+    "id": "354",
     "word": "Dinosaur Toy",
     "word_zh": "恐龍玩具",
     "category": "Toy",
@@ -2840,7 +2832,7 @@
     "img": ""
   },
   {
-    "id": "356",
+    "id": "355",
     "word": "Action Set",
     "word_zh": "動作套裝",
     "category": "Toy",
@@ -2848,7 +2840,7 @@
     "img": ""
   },
   {
-    "id": "357",
+    "id": "356",
     "word": "Magnifying Glass",
     "word_zh": "放大鏡",
     "category": "Toy",
@@ -2856,7 +2848,7 @@
     "img": ""
   },
   {
-    "id": "358",
+    "id": "357",
     "word": "Robot Toy",
     "word_zh": "機器人玩具",
     "category": "Toy",

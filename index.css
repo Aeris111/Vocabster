@@ -113,6 +113,14 @@ main {
 	overflow-y: auto; /* Add vertical scrollbar */
 	scroll-behavior: smooth;
 	padding-right: 0.5rem; /* Add padding for scrollbar spacing */
+	padding-bottom: 2.5rem; /* Add padding to ensure the last item is fully visible */
+	/* Hide scrollbar */
+	scrollbar-width: none; /* For Firefox */
+	-ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+#stomachCategories::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Opera */
 }
 
 #stomach-inner h1 {
@@ -144,10 +152,12 @@ main {
 	grid-template-columns: repeat(4, 1fr); /* Maximum 4 containers per row */
 	gap: 0.5rem;
 	margin-bottom: 1rem;
+	justify-items: center; /* Center each row horizontally */
+	align-items: center; /* Center each row vertically */
 }
 
 .stomach-grid img {
-	width: 100%;
+	width: 4rem; /* Adjusted width to make items smaller */
 	aspect-ratio: 1 / 1; /* Ensure square shape */
 	border: 1px solid #ddd;
 	border-radius: 0.25rem;
@@ -635,5 +645,97 @@ button:hover {
 #drawCanvasCloseButton:hover {
 	background-color: #333;
 	color: #fff; /* Change "X" color to white */
+}
+
+/* Style the new VIconDisplay div */
+#VIconDisplay {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 20rem;
+	background-color: rgba(255, 255, 255, 0.95);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	z-index: 1000;
+}
+
+#VIconDisplay-inner {
+	width: 100%;
+	text-align: center;
+}
+
+#VIconDisplay-title {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative; /* Added for positioning the close button */
+}
+
+#VIconDisplay-word-zh {
+	font-size: 1.2rem;
+	color: #555;
+	margin-left: 1rem; /* Ensure spacing between word and word_zh */
+}
+
+#VIconDisplay-image {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+	margin-bottom: 3rem; /* Add extra margin to avoid overlap with the Edit button */
+}
+
+#VIconDisplayCloseButton {
+	position: absolute;
+	right: 0; /* Align to the right of the title */
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0.25rem 0.5rem;
+	background: none;
+	border: 1px solid #333;
+	border-radius: 0.25rem;
+	font-size: 1rem;
+	cursor: pointer;
+	color: #333;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+#VIconDisplayCloseButton:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+#VIconDisplayEditButton {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem; /* Space between text and image */
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10; /* Ensure it stays above the image */
+}
+
+#VIconDisplayEditButton img {
+	width: 1rem;
+	height: 1rem;
+}
+
+#VIconDisplayEditButton:hover {
+	background-color: #ddd;
 }
 
