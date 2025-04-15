@@ -282,11 +282,11 @@ function showDrawInterface(card, container) {
 
 	// Set cursor to the current tool
 	if (currentTool === "pen") {
-		drawCanvas.style.cursor = "url('res/cur/pencil.cur'), auto";
-		drawCanvasContainer.style.cursor = "url('res/cur/pencil.cur'), auto";
+		drawCanvas.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
+		drawCanvasContainer.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
 	} else if (currentTool === "eraser") {
-		drawCanvas.style.cursor = "url('res/cur/eraser.cur'), auto";
-		drawCanvasContainer.style.cursor = "url('res/cur/eraser.cur'), auto";
+		drawCanvas.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
+		drawCanvasContainer.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
 	}
 
 	// Handle drawing
@@ -341,13 +341,13 @@ resetButton.onclick = () => {
 // Tool selection
 penTool.onclick = () => {
 	currentTool = "pen";
-	drawCanvas.style.cursor = "url('res/cur/pencil.cur'), auto"; // Set cursor to pencil cursor
-	drawCanvasContainer.style.cursor = "url('res/cur/pencil.cur'), auto"; // Update container cursor
+	drawCanvas.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
+	drawCanvasContainer.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
 };
 eraserTool.onclick = () => {
 	currentTool = "eraser";
-	drawCanvas.style.cursor = "url('res/cur/eraser.cur'), auto"; // Set cursor to eraser cursor
-	drawCanvasContainer.style.cursor = "url('res/cur/eraser.cur'), auto"; // Update container cursor
+	drawCanvas.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
+	drawCanvasContainer.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
 };
 
 /** Displays the VIconDisplay div with the selected item's details. */
