@@ -201,14 +201,6 @@ main {
 	height: 100%;
 	transform-style: preserve-3d;
 	transition: transform 0.6s;
-	cursor: pointer;
-}
-
-/* Rotates the card around the Y-axis when the checkbox is checked such that the back side is visible.
-	It makes use of the same technique as the entries list to toggle the checkbox state when the card is clicked.
-	When the checkbox is no longer checked, the card is rotated back to the front side. */
-#flip-card-checkbox:checked ~ main #card-inner {
-	transform: rotateY(180deg);
 }
 
 .card {
@@ -738,5 +730,28 @@ button:hover {
 
 #VIconDisplayEditButton:hover {
 	background-color: #ddd;
+}
+
+/* Styles for the life system hearts */
+#lifeContainer {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.life-heart {
+	width: 2rem;
+	height: 2rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.life-heart.full {
+	background-image: url("res/img/heart-full.png");
+}
+
+.life-heart.empty {
+	background-image: url("res/img/heart-empty.png");
 }
 

@@ -271,6 +271,7 @@ function updateDataAfterFeed() {
             populateStomach(); // Refresh the stomach
         }
     }
+	restoreLife();
 }
 
 // Update showDrawInterface to disable the button and close Tmenu after saving
@@ -531,4 +532,29 @@ populateStomach();
 // Initial render
 initStomach();
 renderCard();
+
+let currentLives = 1;
+const maxLives = 5;
+const lifeContainer = document.getElementById("lifeContainer");
+
+/** Initializes the life system display. */
+function initLifeSystem() {
+	lifeContainer.innerHTML = ""; // Clear existing hearts
+	for (let i = 0; i < maxLives; i++) {
+		const heart = document.createElement("div");
+		heart.classList.add("life-heart", i < currentLives ? "full" : "empty");
+		lifeContainer.appendChild(heart);
+	}
+}
+
+/** Restores one life when feeding vocMon. */
+function restoreLife() {
+	if (currentLives < maxLives) {
+		currentLives++;
+		initLifeSystem();
+	}
+}
+
+// Call initLifeSystem on page load
+initLifeSystem();
 
