@@ -543,6 +543,9 @@ function initLifeSystem() {
 	for (let i = 0; i < maxLives; i++) {
 		const heart = document.createElement("div");
 		heart.classList.add("life-heart", i < currentLives ? "full" : "empty");
+		heart.style.backgroundImage = i < currentLives 
+			? "url('res/img/heart-full.png')" 
+			: "url('res/img/heart-empty.png')"; // Ensure images are set
 		lifeContainer.appendChild(heart);
 	}
 }
@@ -555,6 +558,8 @@ function restoreLife() {
 	}
 }
 
-// Call initLifeSystem on page load
-initLifeSystem();
+// Ensure the life system is initialized after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+	initLifeSystem();
+});
 

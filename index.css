@@ -595,6 +595,32 @@ button:hover {
     border-radius: 1rem;
 }
 
+/* Styles for the life system hearts */
+#lifeContainer {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -100%); /* Position above vocMon */
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.life-heart {
+	width: 2rem;
+	height: 2rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.life-heart.full {
+	background-image: url("res/img/heart-full.png");
+}
+
+.life-heart.empty {
+	background-image: url("res/img/heart-empty.png");
+}
+
 /* Style the close button for TMenu */
 #TmenuCloseButton {
 	width: 2rem;
@@ -730,28 +756,5 @@ button:hover {
 
 #VIconDisplayEditButton:hover {
 	background-color: #ddd;
-}
-
-/* Styles for the life system hearts */
-#lifeContainer {
-	display: flex;
-	justify-content: center;
-	gap: 0.5rem;
-	margin-top: 1rem;
-}
-
-.life-heart {
-	width: 2rem;
-	height: 2rem;
-	background-size: cover;
-	background-position: center;
-}
-
-.life-heart.full {
-	background-image: url("res/img/heart-full.png");
-}
-
-.life-heart.empty {
-	background-image: url("res/img/heart-empty.png");
 }
 
