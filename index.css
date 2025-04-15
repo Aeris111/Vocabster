@@ -12,6 +12,7 @@ html {
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	cursor: default; /* Default cursor */
 }
 
 img, picture, video, canvas, svg {
@@ -44,6 +45,7 @@ html {
 
 body {
 	display: contents;
+	cursor: default; /* Default cursor */
 }
 
 /* Arranges the main content into rows for header, flashcard area, and actions. */
