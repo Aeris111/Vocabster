@@ -21,88 +21,72 @@
 				<label for="Tmenu-checkbox" id="TmenuButton" title="Today's Menu">
 					<img src="res/img/menu.png" alt="Menu" />
 				</label>
-				<label for="magnifier-checkbox" id="magnifierButton" title="Show All Entries">
+				Nearly complete right?
+				<label for="magnifier-checkbox" id="magnifierButton" title="Show Stomach">
 					<img src="res/img/mag.png" alt="Magnifier" />
 				</label>
-				SOS
 			</h1>
 			<section id="Tmenu">
 				<div id="Tmenu-inner">
-					<h1>Today's Menu <button id="TmenuCloseButton" title="Close Menu">✖</button></h1> <!-- Close button moved -->
+					<h1>Today's Menu <button id="TmenuCloseButton" class="close-button" title="Close Menu">✖</button></h1> <!-- Close button moved -->
 					<ul id="TmenuList"></ul> <!-- Placeholder for Tmenu buttons -->
 				</div>
 			</section>		
 			<!-- This section displays items only by image, similar to Tmenu. -->
 			<section id="stomach">
-				<div id="stomach-inner">
-					<h1>Vocabster's Stomach <button id="stomachCloseButton" title="Close Stomach">✖</button></h1>
-					<div id="stomachCategories"></div> <!-- Dynamically populated categories -->
+				<div id="stomach-wrapper">
+					<div id="stomach-inner">
+						<h1>Vocabster's Stomach <button id="stomachCloseButton" class="close-button" title="Close Stomach">✖</button></h1>
+						<div id="stomachCategories"></div> <!-- Dynamically populated categories -->
+					</div>
 				</div>
 			</section>
 			<!-- The main flashcard section. Clicking flips between front and back. -->
 			<section id="flashcard">
 				<div id="card-inner">
-					<!-- STUDENTS: Start of recommended modifications -->
-					<!-- Add and rearrange HTML elements inside .card-front and .card-back below. -->
-					<div class="card card-front">
-					
-					</div>					
-	
-					<div class="card card-back">
-						<p>
-							<span id="back-pos"></span>
-							<span id="back-definition"></span>
-						</p>
-						<img id="back-image" />
+					<div class="card">
+						<div id="vocMonContainer">
+							<img src="res/img/vocabster_chara.png" draggable="false" ondragstart="false" />
+							<div id="vocMonCover"></div>
+						</div>
 					</div>
-					<!-- STUDENTS: End of recommended modifications -->
 				</div>
 			</section>
 			<div id="lifeContainer">life</div>
-			<div id="vocMonContainer"></div>
 			<section id="VIconDisplay" style="display: none;">
 				<div id="VIconDisplay-inner">
-					<h1 id="VIconDisplay-title">
-						<span id="VIconDisplay-word"></span>
-						<span id="VIconDisplay-word-zh" style="margin-left: 1rem;"></span>
-						<button id="VIconDisplayCloseButton" title="Close Display">✖</button> <!-- Moved close button -->
-					</h1>
+					<h2 id="VIconDisplay-title" class="word-title">
+						<button id="VIconDisplayCloseButton" class="close-button" title="Close Display">✖</button>
+						<span id="VIconDisplay-word" class="word-title-en"></span>
+						<span id="VIconDisplay-word-zh" class="word-title-zh"></span>
+					</h2>
 					<img id="VIconDisplay-image" alt="VIcon Image" />
 					<button id="VIconDisplayEditButton" title="Edit Image">
 						Edit <img src="res/img/pencil.png" alt="Pencil Icon" />
 					</button>
 				</div>
 			</section>
-				<!-- Drawing interface structure -->
-				<div id="drawCanvasContainer" style="display: none;">
-					<button id="drawCanvasCloseButton" title="Close Drawing">✖</button> <!-- Close button -->
-					<h2 id="drawWord"></h2>
-					<h2 id="drawWordZh" style="margin-left: 1rem;"></h2> <!-- Added for word_zh -->
-					<canvas id="drawCanvas"></canvas>
-					<div id="drawTools">
-						<button id="pen" title="Pencil">
-							<img src="res/img/pencil.png" alt="Pencil" />
-						</button>
-						<button id="eraser" title="Eraser">
-							<img src="res/img/eraser.png" alt="Eraser" />
-						</button>
-					</div>
-					<div id="drawActions">
-						<button id="done">Done!</button>
-						<button id="reset">Reset</button>
-					</div>
+			<!-- Drawing interface structure -->
+			<div id="drawCanvasContainer" style="display: none;">
+				<h2 id="drawCanvasContainer-title" class="word-title">
+					<button id="drawCanvasCloseButton" class="close-button" title="Close Drawing">✖</button>
+					<span id="drawWord" class="word-title-en"></span>
+					<span id="drawWordZh" class="word-title-zh"></span>
+				</h2>
+				<canvas id="drawCanvas"></canvas>
+				<div id="drawTools">
+					<button id="pen" title="Pencil">
+						<img src="res/img/pencil.png" alt="Pencil" />
+					</button>
+					<button id="eraser" title="Eraser">
+						<img src="res/img/eraser.png" alt="Eraser" />
+					</button>
 				</div>
-			
-			<!-- Navigation and learning progress buttons for the current flashcard. -->
-			<div id="actions">
-				<button id="btn-back">‹ Back</button>
-				<div id="btns-progress">
-					<button id="btn-again">☹ Again</button>
-					<button id="btn-good">😉 Good</button>
-					<button id="btn-easy">😍 Easy</button>
+				<div id="drawActions">
+					<button id="done">Done!</button>
+					<button id="reset">Reset</button>
 				</div>
-				<button id="btn-skip">Skip ›</button>
-			</div>				
+			</div>
 		</main>
 		<!-- This line imports the JavaScript file containing the logic for the flashcard app. It can be modified to add functionality to the app. -->
 		<script src="./index.js" type="module"></script>

@@ -63,51 +63,37 @@ main {
 #header {
 	color: #002a44;
 	line-height: 1;
-}
-
-#toggle-entries {
-	display: inline-block;
-	width: 2.5rem;
-	font-size: 70%;
-	font-weight: 900;
-	text-align: center;
-	cursor: pointer;
-	transform: rotate(88deg);
-	transform-origin: 60% 60%;
-	transition: color 0.3s;
-	color: #007acc;
-}
-
-#toggle-entries:hover {
-	color: #005488;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /* The entries list, which is overlaid on top of the flashcard area. */
 #stomach {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90%;
-	max-width: 30rem;
-	height: 80%;
+	position: relative;
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+	z-index: 1000;
+	display: none;
+}
+
+#stomach-wrapper {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#stomach-inner {
+	width: 30rem;
+	max-height: calc(100% - 2rem);
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 1rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding: 1rem;
-	z-index: 1000;
-	overflow: hidden; /* Prevent content overflow */
-}
-
-#stomach-inner {
-	width: 100%;
-	height: 100%;
-	overflow: hidden; /* Prevent horizontal overflow */
-	position: relative;
+	overflow-y: auto;
 }
 
 #stomachCategories {
@@ -132,67 +118,47 @@ main {
 	font-size: 1.5rem;
 }
 
-#stomachCloseButton {
-	padding: 0.25rem 0.5rem;
-	background: none;
-	border: 1px solid #333;
-	border-radius: 0.25rem;
-	font-size: 1rem;
-	cursor: pointer;
-	color: #333;
-	transition: background-color 0.3s, color 0.3s;
-}
-
-#stomachCloseButton:hover {
-	background-color: #333;
-	color: #fff;
-}
-
 .stomach-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr); /* Maximum 4 containers per row */
 	gap: 0.5rem;
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 	justify-items: center; /* Center each row horizontally */
 	align-items: center; /* Center each row vertically */
 }
 
-.stomach-grid img {
-	width: 4rem; /* Adjusted width to make items smaller */
-	aspect-ratio: 1 / 1; /* Ensure square shape */
-	border: 1px solid #ddd;
-	border-radius: 0.25rem;
+.stomach-icon {
+	width: 4rem;
+	height: 4rem;
+	padding: 0;
+	border: 1px solid #bbb;
+	border-radius: 0.5rem;
 	object-fit: cover;
-	cursor: pointer;
+	cursor: url("res/cur/mag.png"), auto;
 	transition: transform 0.3s, box-shadow 0.3s;
-	background-color: white; /* Set background color to white */
+	background-color: #eee;
+	overflow: hidden;
+	font-size: 1.5rem;
+	color: #333;
 }
 
-.stomach-grid img::after {
-	content: ""; /* Hide the word text */
-}
-
-.stomach-grid img:hover {
+.stomach-icon:enabled:hover {
 	transform: scale(1.05);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.row-highlight {
-	background-color: #fff3cd;
-}
-
-.overdue-date {
-	color: #d9534f;
-	font-weight: bold;
+.stomach-icon:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 /* The flashcard container, which uses perspective to allow a 3D flip animation. */
 #flashcard {
+	position: relative;
 	grid-row: 2 / 3;
 	grid-column: 1 / 2;
 	height: 100%;
-	position: relative;
-	perspective: 60rem;
 }
 
 #card-inner {
@@ -209,6 +175,7 @@ main {
 	height: 100%;
 	backface-visibility: hidden;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
@@ -218,69 +185,6 @@ main {
 	border-radius: 1rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s;
-}
-
-.card:hover {
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* STUDENTS: Start of recommended modifications */
-/* You can alter colours, fonts, sizing, or layout for .card-front and .card-back below. */
-
-/* Styles for the front side of the card. */
-.card-front {
-	color: #11222d;
-	/* Additional styles here (e.g., background-color: #bbccdd;) */
-}
-
-/* Add styles for additional elements on the front side here. Here is an example: */
-
-#front-word {
-	font-size: 200%;
-}
-
-/* Styles for the back side of the card. */
-.card-back {
-	transform: rotateY(180deg);
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	gap: 0.5rem;
-	/* Additional styles here (e.g., background-color: #bbddcc;) */
-}
-
-/* Add styles for additional elements on the back side here. Here are some examples: */
-
-#back-pos {
-	padding: 1px 3px;
-	color: #777;
-	border: 1px solid #777;
-	border-radius: 2px;
-	font-size: 90%;
-}
-
-#back-image {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-
-#back-audio {
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-
-#back-video {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-
-/* STUDENTS: End of recommended modifications */
-
-/* The actions area, which contains buttons for different actions. */
-#actions {
-	display: flex;
-	justify-content: space-between;
-	gap: 0.5rem;
 }
 
 button {
@@ -299,24 +203,6 @@ button:hover {
 	background-color: #c1eaff;
 }
 
-#btns-progress {
-	display: flex;
-	gap: 0.5rem;
-}
-
-/* Different background colours help distinguish button actions. */
-#btn-again {
-	background-color: #ffcccc;
-}
-
-#btn-good {
-	background-color: #ccffcc;
-}
-
-#btn-easy {
-	background-color: #ccccff;
-}
-
 /* Style #Tmenu similar to #stomach */
 #Tmenu {
 	position: relative;
@@ -333,20 +219,6 @@ button:hover {
 	border-radius: 1rem;
 }
 
-#Tmenu ul {
-	list-style: none;
-	padding: 1rem;
-}
-
-#Tmenu li {
-	padding: 0.5rem 0;
-	border-bottom: 1px solid #ddd;
-}
-
-#Tmenu li:last-child {
-	border-bottom: none;
-}
-
 /* Make #Tmenu-checkbox control the visibility of #Tmenu */
 #Tmenu-checkbox:checked ~ main #Tmenu {
 	display: grid;
@@ -358,7 +230,7 @@ button:hover {
 
 #Tmenu-inner {
 	background-color: #f9f9f9;
-	padding: 1rem;
+	padding: 1rem 2rem;
 	border-radius: 1rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -392,8 +264,7 @@ button:hover {
 	display: inline-block;
 	width: 3rem;
 	height: 3rem;
-	border: 2.5px solid black; 
-	z-index: 20;
+	border: 2.5px solid black;
 }
 
 #magnifierButton img {
@@ -408,9 +279,12 @@ button:hover {
 	background-color: white;
 }
 
-#magnifier-checkbox:not(:checked) ~ main #stomach {
-    display: none;
-    opacity: 0;
+#magnifier-checkbox:checked ~ main #stomach {
+	display: block;
+	opacity: 1;
+	@starting-style {
+		opacity: 0;
+	}
 }
 
 .tmenu-button {
@@ -439,7 +313,6 @@ button:hover {
 	border-radius: 0.5rem;
 	background-color: #ddd;
 	cursor: pointer;
-	margin: 0.5rem;
 }
 
 .tmenu-container:hover {
@@ -468,10 +341,10 @@ button:hover {
 #TmenuList {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 1rem;
+	gap: 2rem;
 	justify-items: center;
 	align-items: center;
-	padding: 1rem;
+	padding: 1rem 0;
 }
 
 /* Style the drawing interface and tools */
@@ -569,30 +442,14 @@ button:hover {
 	transform: scale(0.5);
 }
 
-/* Style the image to ensure it is centered in the main interface */
-#vocMon {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 25%;
-	max-height: 25%;
-	border-radius: 1rem;
+#vocMonContainer img {
+    max-width: 14rem;
 }
 
-/* Style the new container and set the image as its background */
-#vocMonContainer {
+/* Cover to prevent image dragging */
+#vocMonCover {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 18%;
-    height: 35%;
-    background-image: url("res/img/vocabster_chara.png");
-    background-size: contain; /* Ensures the entire image is visible */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    border-radius: 1rem;
+	inset: 0;
 }
 
 /* Styles for the life system hearts */
@@ -621,32 +478,8 @@ button:hover {
 	background-image: url("res/img/heart-empty.png");
 }
 
-/* Style the close button for TMenu */
-#TmenuCloseButton {
-	width: 2rem;
-	height: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: none;
-	border: 1px solid #333;
-	border-radius: 0.25rem; /* Makes it a square with slightly rounded corners */
-	font-size: 1.5rem;
-	cursor: pointer;
-	color: #333;
-	transition: background-color 0s, color 0s;
-}
-
-#TmenuCloseButton:hover {
-	background-color: #333;
-	color: #fff; /* Change "X" color to white */
-}
-
-/* Style the close button for drawCanvasContainer */
-#drawCanvasCloseButton {
-	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
+/* Unified close button styles */
+.close-button {
 	width: 2rem;
 	height: 2rem;
 	display: flex;
@@ -661,7 +494,7 @@ button:hover {
 	transition: background-color 0.3s, color 0.3s;
 }
 
-#drawCanvasCloseButton:hover {
+.close-button:hover {
 	background-color: #333;
 	color: #fff; /* Change "X" color to white */
 }
@@ -685,24 +518,23 @@ button:hover {
 	z-index: 1000;
 }
 
-#VIconDisplay-inner {
-	width: 100%;
-	text-align: center;
-}
-
-#VIconDisplay-title {
+.word-title {
 	font-size: 1.5rem;
-	margin-bottom: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative; /* Added for positioning the close button */
+	width: 100%;
 }
 
-#VIconDisplay-word-zh {
+.word-title-en {
+	display: inline-block;
+}
+
+.word-title-zh {
+	display: inline-block;
 	font-size: 1.2rem;
 	color: #555;
-	margin-left: 1rem; /* Ensure spacing between word and word_zh */
+}
+
+.word-title .close-button {
+	float: right;
 }
 
 #VIconDisplay-image {
@@ -710,26 +542,6 @@ button:hover {
 	height: auto;
 	border-radius: 0.5rem;
 	margin-bottom: 3rem; /* Add extra margin to avoid overlap with the Edit button */
-}
-
-#VIconDisplayCloseButton {
-	position: absolute;
-	right: 0; /* Align to the right of the title */
-	top: 50%;
-	transform: translateY(-50%);
-	padding: 0.25rem 0.5rem;
-	background: none;
-	border: 1px solid #333;
-	border-radius: 0.25rem;
-	font-size: 1rem;
-	cursor: pointer;
-	color: #333;
-	transition: background-color 0.3s, color 0.3s;
-}
-
-#VIconDisplayCloseButton:hover {
-	background-color: #333;
-	color: #fff;
 }
 
 #VIconDisplayEditButton {
