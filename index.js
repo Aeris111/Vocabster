@@ -130,35 +130,6 @@ function showDrawInterface(card, container) {
 	document.getElementById("drawWordZh").textContent = card.word_zh || ""; // Set word_zh
 	context.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
 
-	// Set cursor to the current tool
-	if (currentTool === "pen") {
-		drawCanvas.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
-		drawCanvasContainer.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
-	} else if (currentTool === "eraser") {
-		drawCanvas.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
-		drawCanvasContainer.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
-	}
-
-	// Handle drawing
-	drawCanvas.addEventListener("mousedown", (e) => {
-		isDrawing = true;
-		context.beginPath();
-		context.moveTo(e.offsetX, e.offsetY);
-	});
-	drawCanvas.addEventListener("mousemove", (e) => {
-		if (isDrawing) {
-			if (currentTool === "pen") {
-				context.strokeStyle = "black";
-				context.lineTo(e.offsetX, e.offsetY);
-				context.stroke();
-			} else if (currentTool === "eraser") {
-				context.clearRect(e.offsetX - 10, e.offsetY - 10, 20, 20);
-			}
-		}
-	});
-	drawCanvas.addEventListener("mouseup", () => (isDrawing = false));
-	drawCanvas.addEventListener("mouseleave", () => (isDrawing = false));
-
 	const doneButtonOnClick = () => {
 		// Save the drawing as an icon
 		const imageData = drawCanvas.toDataURL("image/png");
@@ -196,16 +167,38 @@ resetButton.addEventListener("click", () => {
 	context.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
 });
 
+// Handle drawing
+drawCanvas.addEventListener("mousedown", (e) => {
+	isDrawing = true;
+	context.beginPath();
+	context.moveTo(e.offsetX, e.offsetY);
+});
+drawCanvas.addEventListener("mousemove", (e) => {
+	if (isDrawing) {
+		if (currentTool === "pen") {
+			context.strokeStyle = "black";
+			context.lineTo(e.offsetX, e.offsetY);
+			context.stroke();
+		} else if (currentTool === "eraser") {
+			context.clearRect(e.offsetX - 10, e.offsetY - 10, 20, 20);
+		}
+	}
+});
+drawCanvas.addEventListener("mouseup", () => (isDrawing = false));
+drawCanvas.addEventListener("mouseleave", () => (isDrawing = false));
+
 // Tool selection
+function setDrawCanvasCursorImage(tool) {
+	drawCanvas.style.cursor = `url('res/cur/${tool}.png') 2 27, auto`; // Anchor slightly lower
+	drawCanvasContainer.style.cursor = `url('res/cur/${tool}.png') 2 27, auto`; // Anchor slightly lower
+}
 penTool.addEventListener("click", () => {
 	currentTool = "pen";
-	drawCanvas.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
-	drawCanvasContainer.style.cursor = "url('res/cur/pencil.png') 2 27, auto"; // Anchor slightly lower
+	setDrawCanvasCursorImage("pencil");
 });
 eraserTool.addEventListener("click", () => {
 	currentTool = "eraser";
-	drawCanvas.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
-	drawCanvasContainer.style.cursor = "url('res/cur/eraser.png') 2 27, auto"; // Anchor slightly lower
+	setDrawCanvasCursorImage("eraser");
 });
 
 /** Displays the VIconDisplay div with the selected item's details. */
@@ -387,6 +380,7 @@ function restoreLife() {
 }
 
 // Initialize on page load
+setDrawCanvasCursorImage("pencil");
 populateTmenu();
 populateStomach();
 initLifeSystem();
