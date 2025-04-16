@@ -284,7 +284,7 @@ document.getElementById("VIconDisplayEditButton").addEventListener("click", () =
 
 		const doneButtonOnClick = () => {
 			const updatedImageData = drawCanvas.toDataURL("image/png");
-			setImage(card, updatedImageData);
+			setImage(card, updatedImageData); // Update storage with the new image
 
 			// Update VIconDisplay
 			document.getElementById("VIconDisplay-image").src = updatedImageData;
