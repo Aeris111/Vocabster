@@ -32,6 +32,54 @@ const eraserTool = document.getElementById("eraser");
 const doneButton = document.getElementById("done");
 const resetButton = document.getElementById("reset");
 const lifeContainer = document.getElementById("lifeContainer");
+const expContainer = document.getElementById("expContainer");
+const expBarFill = document.getElementById("expBarFill");
+const expLevel = document.getElementById("expLevel");
+
+const expRequirements = [0, 1000, 2500, 5000, 10000]; // EXP required for each level
+let currentExp = loadExp();
+let currentLevel = loadLevel();
+
+function loadExp() {
+	const stored = localStorage.getItem("currentExp");
+	return stored ? parseInt(stored, 10) : 0;
+}
+
+function saveExp(exp) {
+	localStorage.setItem("currentExp", exp);
+}
+
+function loadLevel() {
+	const stored = localStorage.getItem("currentLevel");
+	return stored ? parseInt(stored, 10) : 1;
+}
+
+function saveLevel(level) {
+	localStorage.setItem("currentLevel", level);
+}
+
+function addExp(amount) {
+	if (currentLevel >= expRequirements.length - 1) return; // Max level reached
+
+	currentExp += amount;
+	saveExp(currentExp);
+
+	// Check if level up
+	while (currentLevel < expRequirements.length - 1 && currentExp >= expRequirements[currentLevel]) {
+		currentExp -= expRequirements[currentLevel];
+		currentLevel++;
+		saveLevel(currentLevel);
+		saveExp(currentExp);
+	}
+
+	updateExpDisplay();
+}
+
+function updateExpDisplay() {
+	expLevel.textContent = `Level ${currentLevel}`;
+	const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
+	expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
+}
 
 const minLives = 1;
 const maxLives = 5;
@@ -90,7 +138,7 @@ function makeVIconDraggable(imageData) {
 	vIcon.style.position = "absolute";
 	vIcon.style.left = `${randomLeft}px`;
 	vIcon.style.top = `${randomTop}px`;
-	vIcon.style.transform = "translate(0, 0)";
+	vIcon.style.transform = "translate(0, 0)`;
 
 	// Enable dragging
 	let isDragging = false;
@@ -416,6 +464,7 @@ function restoreLife() {
 		saveNumberOfLives();
 		initLifeSystem();
 	}
+	addExp(10); // Add 10 EXP when feeding vocMon
 }
 
 // Initialize on page load
@@ -423,3 +472,4 @@ setDrawCanvasCursorImage("pencil");
 populateTmenu();
 populateStomach();
 initLifeSystem();
+updateExpDisplay();
