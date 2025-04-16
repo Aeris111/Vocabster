@@ -1,5 +1,26 @@
 import data from "./data/vocabster_data.json" with { type: "json" };
 
+/** Loads flashcard progress from local storage if available. */
+function loadProgress() {
+	const stored = localStorage.getItem("flashcardProgress");
+	return stored ? JSON.parse(stored) : {};
+}
+
+/** Saves the current progress back to local storage. */
+function saveProgress(progress) {
+	localStorage.setItem("flashcardProgress", JSON.stringify(progress));
+}
+
+function getImage(card) {
+	return progressData[card.id]?.image;
+}
+
+function setImage(card, image) {
+	(progressData[card.id] ||= {}).image = image;
+	saveProgress(progressData);
+}
+
+const progressData = loadProgress();
 const cards = data;
 
 const drawCanvasContainer = document.getElementById("drawCanvasContainer");
@@ -112,7 +133,7 @@ function makeVIconDraggable(imageData) {
 /** Updates data after feeding Vocabster. */
 function updateDataAfterFeed() {
     if (cards.length > 0) {
-        const fedCard = cards.find(card => !card.image); // Find the card without an image
+        const fedCard = cards.find(card => !getImage(card)); // Find the card without an image
         if (fedCard) {
             cards.splice(cards.indexOf(fedCard), 1); // Remove the fed card from the array
             populateStomach(); // Refresh the stomach
@@ -138,7 +159,7 @@ function showDrawInterface(card, container) {
 		icon.textContent = ""; // Remove "?" text
 
 		// Update the card's image property
-		card.image = imageData;
+		setImage(card, imageData);
 
 		// Make the VIcon draggable
 		makeVIconDraggable(imageData);
@@ -210,7 +231,7 @@ function showVIconDisplay(item) {
 
 	word.textContent = item.word;
 	wordZh.textContent = item.word_zh || ""; // Display word_zh if available
-	image.src = item.image;
+	image.src = getImage(item);
 
 	display.style.display = "flex";
 }
@@ -247,7 +268,7 @@ document.getElementById("VIconDisplayEditButton").addEventListener("click", () =
 
 		const doneButtonOnClick = () => {
 			const updatedImageData = drawCanvas.toDataURL("image/png");
-			card.image = updatedImageData;
+			setImage(card, updatedImageData);
 
 			// Update VIconDisplay
 			document.getElementById("VIconDisplay-image").src = updatedImageData;
@@ -281,7 +302,7 @@ function populateTmenu() {
 	tmenuList.innerHTML = ""; // Clear previous entries
 
 	// Filter cards without images
-	const cardsWithoutImages = cards.filter(card => !card.image);
+	const cardsWithoutImages = cards.filter(card => !getImage(card));
 
 	// Randomly select 5 cards
 	const selectedCards = cardsWithoutImages.sort(() => 0.5 - Math.random()).slice(0, 5);
@@ -339,9 +360,10 @@ function populateStomach() {
 			const icon = document.createElement("button");
 			icon.classList.add("stomach-icon");
 
-			if (item.image) {
+			const image = getImage(item);
+			if (image) {
 				const img = document.createElement("img");
-				img.src = item.image;
+				img.src = image;
 				img.alt = item.word;
 				icon.appendChild(img);
 				icon.title = item.word;
