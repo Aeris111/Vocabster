@@ -101,12 +101,15 @@ main {
 	overflow-y: auto; /* Add vertical scrollbar */
 	scroll-behavior: smooth;
 	padding-right: 0.5rem; /* Add padding for scrollbar spacing */
+}
+
+#stomach-inner{
 	/* Hide scrollbar */
 	scrollbar-width: none; /* For Firefox */
 	-ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
 
-#stomachCategories::-webkit-scrollbar {
+#stomach-inner::-webkit-scrollbar {
 	display: none; /* For Chrome, Safari, and Opera */
 }
 
