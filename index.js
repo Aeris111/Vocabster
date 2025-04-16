@@ -31,14 +31,30 @@ const penTool = document.getElementById("pen");
 const eraserTool = document.getElementById("eraser");
 const doneButton = document.getElementById("done");
 const resetButton = document.getElementById("reset");
+const lifeContainer = document.getElementById("lifeContainer");
+
+const minLives = 1;
+const maxLives = 5;
 
 let isDrawing = false;
 let context = drawCanvas.getContext("2d");
 let currentTool = "pen";
-let currentLives = 1;
+let currentLives = loadNumberOfLives();
 
-const maxLives = 5;
-const lifeContainer = document.getElementById("lifeContainer");
+function loadNumberOfLives() {
+	const stored = localStorage.getItem("numberOfLives");
+	if (stored) {
+		const parsed = JSON.parse(stored);
+		// Calculate how many 6-hour intervals have passed since the timestamp
+		return Math.min(maxLives, Math.max(minLives, parsed.lives - Math.floor((+new Date() - parsed.timestamp) / (6 * 60 * 60 * 1000))));
+	} else {
+		return minLives;
+	}
+}
+
+function saveNumberOfLives() {
+	localStorage.setItem("numberOfLives", JSON.stringify({ lives: currentLives, timestamp: +new Date() }));
+}
 
 // Set up canvas for drawing
 drawCanvas.width = 400;
@@ -397,6 +413,7 @@ function initLifeSystem() {
 function restoreLife() {
 	if (currentLives < maxLives) {
 		currentLives++;
+		saveNumberOfLives();
 		initLifeSystem();
 	}
 }
