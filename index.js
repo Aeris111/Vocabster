@@ -79,6 +79,18 @@ function updateExpDisplay() {
 	expLevel.textContent = `Level ${currentLevel} (${currentExp}/${expRequirements[currentLevel] || 1})`;
 	const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
 	expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
+
+	// Update vocMon image based on level
+	const vocMonImage = document.querySelector("#vocMonContainer img");
+	if (currentLevel === 2) {
+		vocMonImage.src = "res/img/vocabster_chara2.png";
+	} else if (currentLevel === 3) {
+		vocMonImage.src = "res/img/vocabster_chara3.png";
+	} else if (currentLevel === 4) {
+		vocMonImage.src = "res/img/vocabster_chara4.png";
+	} else if (currentLevel === 5) {
+		vocMonImage.src = "res/img/vocabster_chara5.png";
+	}
 }
 
 const minLives = 1;
