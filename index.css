@@ -287,6 +287,10 @@ button:hover {
 	background-color: white;
 }
 
+#magnifierButton.active {
+	background-color: #c1eaff; /* Highlight active state */
+}
+
 #magnifier-checkbox:checked ~ main #stomach {
 	display: block;
 	opacity: 1;

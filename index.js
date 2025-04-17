@@ -474,8 +474,35 @@ function restoreLife() {
 		saveNumberOfLives();
 		initLifeSystem();
 	}
-	addExp(10); // Add 10 EXP when feeding vocMon
+	addExp(100); // Add 100 EXP when feeding vocMon
 }
+
+let isExploringStomach = false;
+
+// Ensure stomach is hidden initially
+const stomach = document.getElementById("stomach");
+stomach.style.display = "none";
+stomach.style.opacity = "0";
+
+document.getElementById("magnifierButton").addEventListener("click", () => {
+	isExploringStomach = !isExploringStomach;
+	document.body.style.cursor = isExploringStomach ? "url('res/cur/mag.png'), auto" : "default";
+
+	// Ensure stomach remains hidden when toggling off explore mode
+	if (!isExploringStomach) {
+		stomach.style.display = "none";
+		stomach.style.opacity = "0";
+	}
+});
+
+document.getElementById("vocMonContainer").addEventListener("click", () => {
+	if (isExploringStomach) {
+		stomach.style.display = "flex";
+		stomach.style.opacity = "1";
+		isExploringStomach = false; // Turn off explore mode after opening
+		document.body.style.cursor = "default";
+	}
+});
 
 // Initialize on page load
 setDrawCanvasCursorImage("pencil");
