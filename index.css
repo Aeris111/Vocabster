@@ -180,14 +180,19 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	padding: 2rem;
+	justify-content: space-evenly;
+	padding: 1rem;
 	background-color: #fefefe;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	font-size: 150%;
 	border-radius: 1rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s;
+}
+
+.card::after {
+	content: "";
+	height: 2rem; /* same as #lifeContainer for a balanced position */
 }
 
 button {
@@ -457,10 +462,6 @@ button:hover {
 
 /* Styles for the life system hearts */
 #lifeContainer {
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%, -100%); /* Position above vocMon */
 	display: flex;
 	justify-content: center;
 	gap: 0.5rem;
