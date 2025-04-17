@@ -492,7 +492,7 @@ function restoreLife() {
 		saveNumberOfLives();
 		initLifeSystem();
 	}
-	addExp(100); // Add 100 EXP when feeding vocMon
+	addExp(5000); // Add 100 EXP when feeding vocMon
 }
 
 let isExploringStomach = false;
@@ -503,13 +503,20 @@ stomach.style.display = "none";
 stomach.style.opacity = "0";
 
 document.getElementById("magnifierButton").addEventListener("click", () => {
-	isExploringStomach = !isExploringStomach;
-	document.body.style.cursor = isExploringStomach ? "url('res/cur/mag.png'), auto" : "default";
+	const stomach = document.getElementById("stomach");
+	const magnifierCheckbox = document.getElementById("magnifier-checkbox");
 
-	// Ensure stomach remains hidden when toggling off explore mode
-	if (!isExploringStomach) {
-		stomach.style.display = "none";
+	if (stomach.style.display === "flex") {
+		// Close the stomach and disable explore mode
 		stomach.style.opacity = "0";
+		setTimeout(() => {
+			stomach.style.display = "none";
+			magnifierCheckbox.checked = false; // Uncheck magnifier checkbox
+		}, 300); // Match the fade-out duration
+	} else {
+		// Toggle explore mode
+		isExploringStomach = !isExploringStomach;
+		document.body.style.cursor = isExploringStomach ? "url('res/cur/mag.png'), auto" : "default";
 	}
 });
 
