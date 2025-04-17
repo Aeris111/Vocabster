@@ -114,6 +114,7 @@ context.lineCap = "round";
 function makeVIconDraggable(imageData) {
 	const cardInner = document.getElementById("card-inner");
 	const vocMonContainer = document.getElementById("vocMonContainer");
+	const lifeContainer = document.getElementById("lifeContainer");
 
 	const vIcon = document.createElement("img");
 	vIcon.src = imageData;
@@ -129,16 +130,22 @@ function makeVIconDraggable(imageData) {
 		randomLeft = Math.random() * (cardInner.offsetWidth - vIconSize);
 		randomTop = Math.random() * (cardInner.offsetHeight - vIconSize);
 	} while (
+		// Exclude positions inside #vocMonContainer
 		randomLeft + vIconSize > vocMonContainer.offsetLeft &&
 		randomLeft < vocMonContainer.offsetLeft + vocMonContainer.offsetWidth &&
 		randomTop + vIconSize > vocMonContainer.offsetTop &&
-		randomTop < vocMonContainer.offsetTop + vocMonContainer.offsetHeight
+		randomTop < vocMonContainer.offsetTop + vocMonContainer.offsetHeight ||
+		// Exclude positions inside #lifeContainer
+		randomLeft + vIconSize > lifeContainer.offsetLeft &&
+		randomLeft < lifeContainer.offsetLeft + lifeContainer.offsetWidth &&
+		randomTop + vIconSize > lifeContainer.offsetTop &&
+		randomTop < lifeContainer.offsetTop + lifeContainer.offsetHeight
 	);
 
 	vIcon.style.position = "absolute";
 	vIcon.style.left = `${randomLeft}px`;
 	vIcon.style.top = `${randomTop}px`;
-	vIcon.style.transform = "translate(0, 0)`;
+	vIcon.style.transform = "translate(0, 0)";
 
 	// Enable dragging
 	let isDragging = false;
