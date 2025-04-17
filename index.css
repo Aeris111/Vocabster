@@ -139,7 +139,7 @@ main {
 	object-fit: cover;
 	cursor: url("res/cur/mag.png"), auto;
 	transition: transform 0.3s, box-shadow 0.3s;
-	background-color: #eee;
+	background-color: #ffffff;
 	overflow: hidden;
 	font-size: 1.5rem;
 	color: #333;
@@ -586,10 +586,18 @@ button:hover {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	padding: 0.5rem 1rem;
 	display: flex;
+	flex-direction: column; /* Stack the label above the bar */
 	align-items: center;
-	gap: 1rem;
 	font-size: 1rem;
 	z-index: 1000;
+}
+
+#expStatus {
+	font-size: 0.9rem;
+	font-weight: bold;
+	margin-bottom: 0.3rem; /* Add spacing between the label and the bar */
+	color: #333;
+	text-align: center;
 }
 
 #expBar {

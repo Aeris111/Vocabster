@@ -76,7 +76,7 @@ function addExp(amount) {
 }
 
 function updateExpDisplay() {
-	expLevel.textContent = `Level ${currentLevel}`;
+	expLevel.textContent = `Level ${currentLevel} (${currentExp}/${expRequirements[currentLevel] || 1})`;
 	const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
 	expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
 }
@@ -346,6 +346,9 @@ document.getElementById("VIconDisplayEditButton").addEventListener("click", () =
 
 			// Update Stomach
 			populateStomach();
+
+			// Ensure the Tmenu is updated as well
+			populateTmenu();
 
 			closeButtonOnClick();
 		};
