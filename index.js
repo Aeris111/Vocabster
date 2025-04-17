@@ -407,9 +407,15 @@ document.getElementById("drawCanvasCloseButton").addEventListener("click", () =>
 });
 
 // Close the stomach section when the close button is clicked
-const magnifierCheckbox = document.getElementById("magnifier-checkbox");
 document.getElementById("stomachCloseButton").addEventListener("click", () => {
-	magnifierCheckbox.checked = false;
+	const stomach = document.getElementById("stomach");
+	const magnifierCheckbox = document.getElementById("magnifier-checkbox");
+
+	stomach.style.opacity = "0";
+	setTimeout(() => {
+		stomach.style.display = "none";
+		magnifierCheckbox.checked = false; // Uncheck magnifier checkbox
+	}, 300); // Match the fade-out duration
 });
 
 function populateStomach() {
