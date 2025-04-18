@@ -517,6 +517,7 @@ document.getElementById("magnifierButton").addEventListener("click", () => {
 		setTimeout(() => {
 			stomach.style.display = "none";
 			magnifierCheckbox.checked = false; // Uncheck magnifier checkbox
+			document.body.style.cursor = "default"; // Reset cursor to default
 		}, 300); // Match the fade-out duration
 	} else {
 		// Toggle explore mode
@@ -525,12 +526,24 @@ document.getElementById("magnifierButton").addEventListener("click", () => {
 	}
 });
 
+document.getElementById("vocMonContainer").addEventListener("mouseenter", (e) => {
+	if (isExploringStomach && e.target.id === "vocMonContainer") {
+		document.body.style.cursor = "url('res/cur/mag_exclaim.png'), auto"; // Custom cursor with "!"
+	}
+});
+
+document.getElementById("vocMonContainer").addEventListener("mouseleave", (e) => {
+	if (isExploringStomach && e.target.id === "vocMonContainer") {
+		document.body.style.cursor = "url('res/cur/mag.png'), auto"; // Reset to magnifier cursor
+	}
+});
+
 document.getElementById("vocMonContainer").addEventListener("click", () => {
 	if (isExploringStomach) {
 		stomach.style.display = "flex";
 		stomach.style.opacity = "1";
 		isExploringStomach = false; // Turn off explore mode after opening
-		document.body.style.cursor = "default";
+		document.body.style.cursor = "default"; // Reset cursor to default
 	}
 });
 
