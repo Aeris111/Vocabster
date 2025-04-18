@@ -12,28 +12,25 @@
 		<link rel="stylesheet" href="./index.css" />
 	</head>
 	<body>
-		<!-- These hidden checkboxes store the toggling state of the entries panel and the flashcard. Don't remove them. -->
-		<input type="checkbox" id="Tmenu-checkbox" hidden />
-		<input type="checkbox" id="magnifier-checkbox" hidden />
 		<main>
 			<!-- The header includes a button to show/hide all flashcard entries. -->
 			<h1 id="header">
-				<label for="Tmenu-checkbox" id="TmenuButton" title="Today's Menu">
+				<div id="TmenuButton" title="Today's Menu">
 					<img src="res/img/menu.png" alt="Menu" />
-				</label>
+				</div>
 				<p style="font-size: 25px;">Vocabster Advented! But unable to upgrade anymore at level 4.😿</p>
-				<label for="magnifier-checkbox" id="magnifierButton" title="Explore Stomach">
+				<div id="magnifierButton" title="Explore Stomach">
 					<img src="res/img/mag.png" alt="Magnifier" />
-				</label>
+				</div>
 			</h1>
-			<section id="Tmenu">
+			<section id="Tmenu" style="display: none;">
 				<div id="Tmenu-inner">
 					<h1>Today's Menu <button id="TmenuCloseButton" class="close-button" title="Close Menu">✖</button></h1> <!-- Close button moved -->
 					<ul id="TmenuList"></ul> <!-- Placeholder for Tmenu buttons -->
 				</div>
 			</section>		
 			<!-- This section displays items only by image, similar to Tmenu. -->
-			<section id="stomach">
+			<section id="stomach" style="display: none;">
 				<div id="stomach-wrapper">
 					<div id="stomach-inner">
 						<h1>Vocabster's Stomach <button id="stomachCloseButton" class="close-button" title="Close Stomach">✖</button></h1>

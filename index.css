@@ -221,19 +221,8 @@ button:hover {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	display: none;
 	place-items: center;
-	opacity: 0;
-	transition: display 0.3s allow-discrete, opacity 0.3s;
 	z-index: 20; /* Ensure it appears above the VIcon */
 	border-radius: 1rem;
-}
-
-/* Make #Tmenu-checkbox control the visibility of #Tmenu */
-#Tmenu-checkbox:checked ~ main #Tmenu {
-	display: grid;
-	opacity: 1;
-	@starting-style {
-		opacity: 0;
-	}
 }
 
 #Tmenu-inner {
@@ -289,14 +278,6 @@ button:hover {
 
 #magnifierButton.active {
 	background-color: #c1eaff; /* Highlight active state */
-}
-
-#magnifier-checkbox:checked ~ main #stomach {
-	display: block;
-	opacity: 1;
-	@starting-style {
-		opacity: 0;
-	}
 }
 
 .tmenu-button {
