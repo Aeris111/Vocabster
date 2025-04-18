@@ -31,8 +31,6 @@ const penTool = document.getElementById("pen");
 const eraserTool = document.getElementById("eraser");
 const doneButton = document.getElementById("done");
 const resetButton = document.getElementById("reset");
-const Tmenu = document.getElementById("Tmenu");
-const stomach = document.getElementById("stomach");
 const lifeContainer = document.getElementById("lifeContainer");
 const expContainer = document.getElementById("expContainer");
 const expBarFill = document.getElementById("expBarFill");
@@ -251,7 +249,7 @@ function showDrawInterface(card, container) {
 
 		// Disable the button and close Tmenu
 		container.classList.add("disabled");
-		Tmenu.style.display = "none"; // Close Tmenu
+		document.getElementById("Tmenu-checkbox").checked = false; // Close Tmenu
 
 		closeButtonOnClick();
 	};
@@ -412,21 +410,24 @@ function populateTmenu() {
 
 // Close TMenu when the close button is clicked
 document.getElementById("TmenuCloseButton").addEventListener("click", () => {
-	Tmenu.style.display = "none";
+	document.getElementById("Tmenu-checkbox").checked = false; // Uncheck the checkbox to close TMenu
 });
 
 // Close drawCanvasContainer when the close button is clicked
 document.getElementById("drawCanvasCloseButton").addEventListener("click", () => {
-	drawCanvasContainer.style.display = "none"; // Hide the drawing interface
+	document.getElementById("drawCanvasContainer").style.display = "none"; // Hide the drawing interface
 });
 
 // Close the stomach section when the close button is clicked
 document.getElementById("stomachCloseButton").addEventListener("click", () => {
-	if (isExploringStomach) {
+	const stomach = document.getElementById("stomach");
+	const magnifierCheckbox = document.getElementById("magnifier-checkbox");
+
+	stomach.style.opacity = "0";
+	setTimeout(() => {
 		stomach.style.display = "none";
-		isExploringStomach = false; // Turn off explore mode after opening
-		document.body.style.cursor = "default";
-	}
+		magnifierCheckbox.checked = false; // Uncheck magnifier checkbox
+	}, 300); // Match the fade-out duration
 });
 
 function populateStomach() {
@@ -494,36 +495,35 @@ function restoreLife() {
 	addExp(5000); // Add 100 EXP when feeding vocMon
 }
 
-document.getElementById("TmenuButton").addEventListener("click", () => {
-	if (Tmenu.style.display === "grid") {
-		// Hide today's menu
-		Tmenu.style.display = "none";
-	} else {
-		// Show today's menu
-		Tmenu.style.display = "grid";
-	}
-})
-
 let isExploringStomach = false;
 
 // Ensure stomach is hidden initially
+const stomach = document.getElementById("stomach");
 stomach.style.display = "none";
+stomach.style.opacity = "0";
 
 document.getElementById("magnifierButton").addEventListener("click", () => {
-	if (isExploringStomach) {
+	const stomach = document.getElementById("stomach");
+	const magnifierCheckbox = document.getElementById("magnifier-checkbox");
+
+	if (stomach.style.display === "flex") {
 		// Close the stomach and disable explore mode
-		stomach.style.display = "none";
+		stomach.style.opacity = "0";
+		setTimeout(() => {
+			stomach.style.display = "none";
+			magnifierCheckbox.checked = false; // Uncheck magnifier checkbox
+		}, 300); // Match the fade-out duration
 	} else {
 		// Toggle explore mode
-		stomach.style.display = "flex";
+		isExploringStomach = !isExploringStomach;
+		document.body.style.cursor = isExploringStomach ? "url('res/cur/mag.png'), auto" : "default";
 	}
-	isExploringStomach = !isExploringStomach;
-	document.body.style.cursor = isExploringStomach ? "url('res/cur/mag.png'), auto" : "default";
 });
 
 document.getElementById("vocMonContainer").addEventListener("click", () => {
 	if (isExploringStomach) {
-		stomach.style.display = "none";
+		stomach.style.display = "flex";
+		stomach.style.opacity = "1";
 		isExploringStomach = false; // Turn off explore mode after opening
 		document.body.style.cursor = "default";
 	}
