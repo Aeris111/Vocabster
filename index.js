@@ -36,7 +36,7 @@ const expContainer = document.getElementById("expContainer");
 const expBarFill = document.getElementById("expBarFill");
 const expLevel = document.getElementById("expLevel");
 
-const expRequirements = [0, 1000, 2500, 5000, 10000]; // EXP required for each level
+const expRequirements = [0, 500, 1000, 2500, 5000, 10000]; // EXP required for each level
 let currentExp = loadExp();
 let currentLevel = loadLevel();
 
@@ -59,7 +59,13 @@ function saveLevel(level) {
 }
 
 function addExp(amount) {
-	if (currentLevel >= expRequirements.length - 1) return; // Max level reached
+	if (currentLevel >= expRequirements.length - 1) {
+		// Max level reached, cap EXP at the last level's requirement
+		currentExp = Math.min(currentExp + amount, expRequirements[expRequirements.length - 1]);
+		saveExp(currentExp);
+		updateExpDisplay();
+		return;
+	}
 
 	currentExp += amount;
 	saveExp(currentExp);
@@ -76,24 +82,27 @@ function addExp(amount) {
 }
 
 function updateExpDisplay() {
-	const vocMonImage = document.querySelector("#vocMonContainer img"); // Ensure this is defined before usage
-	if (currentLevel >= expRequirements.length - 1){
-		expLevel.textContent = `Level 5 (MAX)`; // Display "Level 5 (MAX)" for the maximum level
+	if (currentLevel >= expRequirements.length - 1) {
+		expLevel.textContent = "Level MAX";
 		expBarFill.style.width = "100%"; // Fill the bar completely
-		vocMonImage.src = "res/img/vocabster_chara5.png"; // Set max level image
+		expBarFill.style.background = "linear-gradient(to right, red, orange, yellow, green, blue, violet)"; // Rainbow gradient
 	} else {
 		expLevel.textContent = `Level ${currentLevel} (${currentExp}/${expRequirements[currentLevel] || 1})`;
 		const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
-		expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
+		expBarFill.style.width = `${Math.min((currentExp / nextLevelExp) * 100, 100)}%`; // Cap width at 100%
+		expBarFill.style.background = "#4caf50"; // Reset to solid green for non-max levels
+	}
 
-		// Update vocMon image based on level
-		if (currentLevel === 2) {
-			vocMonImage.src = "res/img/vocabster_chara2.png";
-		} else if (currentLevel === 3) {
-			vocMonImage.src = "res/img/vocabster_chara3.png";
-		} else if (currentLevel === 4) {
-			vocMonImage.src = "res/img/vocabster_chara4.png"; 
-		}
+	// Update vocMon image based on level
+	const vocMonImage = document.querySelector("#vocMonContainer img");
+	if (currentLevel === 2) {
+		vocMonImage.src = "res/img/vocabster_chara2.png";
+	} else if (currentLevel === 3) {
+		vocMonImage.src = "res/img/vocabster_chara3.png";
+	} else if (currentLevel === 4) {
+		vocMonImage.src = "res/img/vocabster_chara4.png";
+	} else if (currentLevel === 5) {
+		vocMonImage.src = "res/img/vocabster_chara5.png";
 	}
 }
 
