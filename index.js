@@ -76,9 +76,14 @@ function addExp(amount) {
 }
 
 function updateExpDisplay() {
-	expLevel.textContent = `Level ${currentLevel} (${currentExp}/${expRequirements[currentLevel] || 1})`;
-	const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
-	expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
+	if (currentLevel >= expRequirements.length - 1) {
+		expLevel.textContent = `Level 5 (MAX)`; // Display "Level 5 (MAX)" for the maximum level
+		expBarFill.style.width = "100%"; // Fill the bar completely
+	} else {
+		expLevel.textContent = `Level ${currentLevel} (${currentExp}/${expRequirements[currentLevel] || 1})`;
+		const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
+		expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
+	}
 
 	// Update vocMon image based on level
 	const vocMonImage = document.querySelector("#vocMonContainer img");
