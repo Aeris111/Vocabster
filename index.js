@@ -76,25 +76,24 @@ function addExp(amount) {
 }
 
 function updateExpDisplay() {
-	if (currentLevel >= expRequirements.length - 1) {
+	const vocMonImage = document.querySelector("#vocMonContainer img"); // Ensure this is defined before usage
+	if (currentLevel >= expRequirements.length - 1){
 		expLevel.textContent = `Level 5 (MAX)`; // Display "Level 5 (MAX)" for the maximum level
 		expBarFill.style.width = "100%"; // Fill the bar completely
+		vocMonImage.src = "res/img/vocabster_chara5.png"; // Set max level image
 	} else {
 		expLevel.textContent = `Level ${currentLevel} (${currentExp}/${expRequirements[currentLevel] || 1})`;
 		const nextLevelExp = expRequirements[currentLevel] || 1; // Avoid division by zero
 		expBarFill.style.width = `${(currentExp / nextLevelExp) * 100}%`;
-	}
 
-	// Update vocMon image based on level
-	const vocMonImage = document.querySelector("#vocMonContainer img");
-	if (currentLevel === 2) {
-		vocMonImage.src = "res/img/vocabster_chara2.png";
-	} else if (currentLevel === 3) {
-		vocMonImage.src = "res/img/vocabster_chara3.png";
-	} else if (currentLevel === 4) {
-		vocMonImage.src = "res/img/vocabster_chara4.png";
-	} else if (currentLevel === 5) {
-		vocMonImage.src = "res/img/vocabster_chara5.png";
+		// Update vocMon image based on level
+		if (currentLevel === 2) {
+			vocMonImage.src = "res/img/vocabster_chara2.png";
+		} else if (currentLevel === 3) {
+			vocMonImage.src = "res/img/vocabster_chara3.png";
+		} else if (currentLevel === 4) {
+			vocMonImage.src = "res/img/vocabster_chara4.png"; 
+		}
 	}
 }
 
@@ -497,7 +496,7 @@ function restoreLife() {
 		saveNumberOfLives();
 		initLifeSystem();
 	}
-	addExp(5000); // Add 100 EXP when feeding vocMon
+	addExp(1500); // Add 100 EXP when feeding vocMon
 }
 
 let isExploringStomach = false;
