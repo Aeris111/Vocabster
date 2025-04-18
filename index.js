@@ -36,7 +36,7 @@ const expContainer = document.getElementById("expContainer");
 const expBarFill = document.getElementById("expBarFill");
 const expLevel = document.getElementById("expLevel");
 
-const expRequirements = [0, 500, 1000, 2500, 5000, 10000]; // EXP required for each level
+const expRequirements = [0, 500, 1000, 2500, 5000, 10000,0]; // EXP required for each level
 let currentExp = loadExp();
 let currentLevel = loadLevel();
 
