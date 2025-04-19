@@ -101,7 +101,8 @@ function updateExpDisplay() {
 		vocMonImage.src = "res/img/vocabster_chara3.png";
 	} else if (currentLevel === 4) {
 		vocMonImage.src = "res/img/vocabster_chara4.png";
-	} else if (currentLevel === 5) {
+	} else if (currentLevel === 5 || currentLevel >= expRequirements.length - 1) {
+		// Ensure the correct image is set for max level
 		vocMonImage.src = "res/img/vocabster_chara5.png";
 	}
 }
