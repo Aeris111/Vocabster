@@ -505,7 +505,7 @@ function restoreLife() {
 		saveNumberOfLives();
 		initLifeSystem();
 	}
-	addExp(1500); // Add 100 EXP when feeding vocMon
+	addExp(1000); // Add 100 EXP when feeding vocMon
 }
 
 let isExploringStomach = false;
