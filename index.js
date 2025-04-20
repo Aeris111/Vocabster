@@ -137,7 +137,7 @@ context.lineWidth = 5;
 context.lineCap = "round";
 
 /** Makes the VIcon draggable and displays it on the main interface. */
-function makeVIconDraggable(imageData, cardId) {
+function makeVIconDraggable(imageData) {
 	const cardInner = document.getElementById("card-inner");
 	const vocMonContainer = document.getElementById("vocMonContainer");
 	const lifeContainer = document.getElementById("lifeContainer");
@@ -146,7 +146,6 @@ function makeVIconDraggable(imageData, cardId) {
 	vIcon.src = imageData;
 	vIcon.classList.add("draggable-vicon");
 	vIcon.draggable = false; // Trick to prevent browser built-in drag behavior
-	vIcon.dataset.cardId = cardId; // Store card ID for persistence
 	cardInner.appendChild(vIcon);
 
 	const vIconSize = vIcon.offsetWidth;
@@ -203,7 +202,6 @@ function makeVIconDraggable(imageData, cardId) {
 					// Update data and refresh stomach
 					updateDataAfterFeed();
 					populateStomach();
-					removeVIconFromStorage(cardId); // Remove VIcon from storage
 				}, 500); // Match the duration of the dissipate effect
 				document.removeEventListener("mousemove", onMouseMove);
 				document.removeEventListener("mouseup", onMouseUp);
@@ -227,96 +225,6 @@ function makeVIconDraggable(imageData, cardId) {
 		document.addEventListener("mousemove", onMouseMove);
 		document.addEventListener("mouseup", onMouseUp);
 	});
-
-	// Save VIcon position and data to localStorage
-	saveVIconToStorage(cardId, imageData, randomLeft, randomTop);
-}
-
-/** Saves VIcon data to localStorage for persistence. */
-function saveVIconToStorage(cardId, imageData, left, top) {
-	const storedVIcons = JSON.parse(localStorage.getItem("vIcons")) || [];
-	storedVIcons.push({ cardId, imageData, left, top });
-	localStorage.setItem("vIcons", JSON.stringify(storedVIcons));
-}
-
-/** Removes a VIcon from localStorage after it is fed to vocMon. */
-function removeVIconFromStorage(cardId) {
-	const storedVIcons = JSON.parse(localStorage.getItem("vIcons")) || [];
-	const updatedVIcons = storedVIcons.filter(vIcon => vIcon.cardId !== cardId);
-	localStorage.setItem("vIcons", JSON.stringify(updatedVIcons));
-}
-
-/** Restores VIcons from localStorage on page load. */
-function restoreVIcons() {
-	const storedVIcons = JSON.parse(localStorage.getItem("vIcons")) || [];
-	storedVIcons.forEach(({ cardId, imageData, left, top }) => {
-		const cardInner = document.getElementById("card-inner");
-		const vIcon = document.createElement("img");
-		vIcon.src = imageData;
-		vIcon.classList.add("draggable-vicon");
-		vIcon.draggable = false; // Trick to prevent browser built-in drag behavior
-		vIcon.dataset.cardId = cardId; // Store card ID for persistence
-		cardInner.appendChild(vIcon);
-
-		vIcon.style.position = "absolute";
-		vIcon.style.left = `${left}px`;
-		vIcon.style.top = `${top}px`;
-		vIcon.style.transform = "translate(0, 0)";
-
-		// Enable dragging
-		let isDragging = false;
-		let offsetX, offsetY;
-
-		const onMouseMove = (e) => {
-			if (isDragging) {
-				const newLeft = e.clientX - offsetX - cardInner.getBoundingClientRect().left;
-				const newTop = e.clientY - offsetY - cardInner.getBoundingClientRect().top;
-
-				// Update position
-				vIcon.style.left = `${newLeft}px`;
-				vIcon.style.top = `${newTop}px`;
-
-				// Check if VIcon touches vocMon
-				const vIconRect = vIcon.getBoundingClientRect();
-				const vocMonRect = document.getElementById("vocMonContainer").getBoundingClientRect();
-				if (
-					vIconRect.right > vocMonRect.left &&
-					vIconRect.left < vocMonRect.right &&
-					vIconRect.bottom > vocMonRect.top &&
-					vIconRect.top < vocMonRect.bottom
-				) {
-					// Trigger dissipate effect
-					vIcon.classList.add("dissipate");
-					setTimeout(() => {
-						vIcon.remove();
-						// Update data and refresh stomach
-						updateDataAfterFeed();
-						populateStomach();
-						removeVIconFromStorage(cardId); // Remove VIcon from storage
-					}, 500); // Match the duration of the dissipate effect
-					document.removeEventListener("mousemove", onMouseMove);
-					document.removeEventListener("mouseup", onMouseUp);
-				}
-			}
-		};
-
-		const onMouseUp = () => {
-			isDragging = false;
-			vIcon.style.cursor = "grab";
-			document.removeEventListener("mousemove", onMouseMove);
-			document.removeEventListener("mouseup", onMouseUp);
-		};
-
-		vIcon.addEventListener("mousedown", (e) => {
-			isDragging = true;
-			offsetX = e.clientX - vIcon.getBoundingClientRect().left;
-			offsetY = e.clientY - vIcon.getBoundingClientRect().top;
-			vIcon.style.cursor = "grabbing";
-
-			document.addEventListener("mousemove", onMouseMove);
-			document.addEventListener("mouseup", onMouseUp);
-		});
-	});
 }
 
 /** Updates data after feeding Vocabster. */
@@ -331,59 +239,7 @@ function updateDataAfterFeed() {
 	restoreLife();
 }
 
-/** Populates the TMenu with selected cards. */
-function populateTmenu() {
-	const tmenuList = document.getElementById("TmenuList");
-	tmenuList.innerHTML = ""; // Clear previous entries
-
-	// Retrieve stored TMenu data from localStorage
-	const storedData = JSON.parse(localStorage.getItem("tmenuData"));
-	const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
-
-	let selectedCards;
-	if (storedData && storedData.date === today) {
-		// Use stored cards if they are from today
-		selectedCards = storedData.cards;
-	} else {
-		// Select new cards and store them with today's date
-		const cardsWithoutImages = cards.filter(card => !getImage(card));
-		selectedCards = cardsWithoutImages.sort(() => 0.5 - Math.random()).slice(0, 5);
-		localStorage.setItem("tmenuData", JSON.stringify({ date: today, cards: selectedCards }));
-	}
-
-	// Create containers for each selected card
-	for (const card of selectedCards) {
-		const container = document.createElement("div");
-		container.classList.add("tmenu-container");
-		if (getImage(card)) {
-			container.classList.add("disabled"); // Disable if the card already has an image
-		}
-		container.addEventListener("click", () => showDrawInterface(card, container));
-
-		const icon = document.createElement("div");
-		icon.classList.add("tmenu-icon");
-		icon.textContent = getImage(card) ? "" : "?"; // Show "?" if no image
-		if (getImage(card)) {
-			icon.style.backgroundImage = `url(${getImage(card)})`; // Set background to the image
-		}
-
-		container.appendChild(icon);
-		tmenuList.appendChild(container);
-	}
-}
-
-/** Updates the TMenu data in localStorage after a card is drawn. */
-function updateTmenuData(card) {
-	const storedData = JSON.parse(localStorage.getItem("tmenuData"));
-	if (storedData) {
-		const updatedCards = storedData.cards.map(storedCard =>
-			storedCard.id === card.id ? { ...storedCard, image: getImage(card) } : storedCard
-		);
-		localStorage.setItem("tmenuData", JSON.stringify({ ...storedData, cards: updatedCards }));
-	}
-}
-
-// Update showDrawInterface to save drawn items in TMenu
+// Update showDrawInterface to disable the button and close Tmenu after saving
 function showDrawInterface(card, container) {
 	if (container.classList.contains("disabled")) return;
 
@@ -402,11 +258,8 @@ function showDrawInterface(card, container) {
 		// Update the card's image property
 		setImage(card, imageData);
 
-		// Update TMenu data in localStorage
-		updateTmenuData(card);
-
 		// Make the VIcon draggable
-		makeVIconDraggable(imageData, card.id);
+		makeVIconDraggable(imageData);
 
 		// Disable the button and close Tmenu
 		container.classList.add("disabled");
@@ -418,27 +271,13 @@ function showDrawInterface(card, container) {
 	const closeButtonOnClick = () => {
 		drawCanvasContainer.style.display = "none";
 		drawCanvas.style.cursor = "default";
-
+		
 		doneButton.removeEventListener("click", doneButtonOnClick);
 		drawCanvasCloseButton.removeEventListener("click", closeButtonOnClick);
 	};
 
 	doneButton.addEventListener("click", doneButtonOnClick);
-	drawCanvasCloseButton.addEventListener("click", closeButtonOnClick);
-}
-
-/** Resets the TMenu selection at 23:59:59 every day. */
-function scheduleTmenuReset() {
-	const now = new Date();
-	const nextReset = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
-	const timeUntilReset = nextReset - now;
-
-	setTimeout(() => {
-		localStorage.removeItem("tmenuData"); // Clear stored selection
-		localStorage.removeItem("vIcons"); // Clear stored VIcons
-		populateTmenu(); // Reset TMenu selection
-		scheduleTmenuReset(); // Schedule the next reset
-	}, timeUntilReset);
+	drawCanvasCloseButton.addEventListener("click", closeButtonOnClick);	
 }
 
 // Reset the canvas
@@ -557,6 +396,32 @@ document.getElementById("VIconDisplayEditButton").addEventListener("click", () =
 	}
 });
 
+// Update populateTmenu to create clickable containers for VIcons
+function populateTmenu() {
+	const tmenuList = document.getElementById("TmenuList");
+	tmenuList.innerHTML = ""; // Clear previous entries
+
+	// Filter cards without images
+	const cardsWithoutImages = cards.filter(card => !getImage(card));
+
+	// Randomly select 5 cards
+	const selectedCards = cardsWithoutImages.sort(() => 0.5 - Math.random()).slice(0, 5);
+
+	// Create containers for each selected card
+	for (const card of selectedCards) {
+		const container = document.createElement("div");
+		container.classList.add("tmenu-container");
+		container.addEventListener("click", () => showDrawInterface(card, container));
+
+		const icon = document.createElement("div");
+		icon.classList.add("tmenu-icon");
+		icon.textContent = "?"; // Placeholder text
+
+		container.appendChild(icon);
+		tmenuList.appendChild(container);
+	}
+}
+
 // Close TMenu when the close button is clicked
 document.getElementById("TmenuCloseButton").addEventListener("click", () => {
 	document.getElementById("Tmenu-checkbox").checked = false; // Uncheck the checkbox to close TMenu
@@ -641,7 +506,7 @@ function restoreLife() {
 		saveNumberOfLives();
 		initLifeSystem();
 	}
-	addExp(1000); // Add 100 EXP when feeding vocMon
+	addExp(100); // Add 100 EXP when feeding vocMon
 }
 
 let isExploringStomach = false;
@@ -692,10 +557,8 @@ document.getElementById("vocMonContainer").addEventListener("click", () => {
 });
 
 // Initialize on page load
-restoreVIcons(); // Restore VIcons from localStorage
 setDrawCanvasCursorImage("pencil");
 populateTmenu();
 populateStomach();
 initLifeSystem();
 updateExpDisplay();
-scheduleTmenuReset(); // Schedule daily TMenu reset
