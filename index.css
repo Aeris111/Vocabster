@@ -638,7 +638,7 @@ button:hover {
 	flex-direction: column; /* Stack the label above the bar */
 	align-items: center;
 	font-size: 1rem;
-	z-index: 1000;
+	z-index: 100;
 }
 
 #expStatus {
