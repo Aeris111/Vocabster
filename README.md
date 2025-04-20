@@ -4,7 +4,7 @@ Vocabster is an English vocabulary learning application designed for kindergarte
 
 ## Features
 ### Today's Menu 📖
-You can create your own icons here. The menu will be updated every day at 11:59:59 p.m., and there will be five items available for each day. Remember to feed Vocabster with the icons you've created.
+You can create your own icons here. Remember to feed Vocabster with the icons you've created.
 
 `Canvas`🖌️
 - Make good use of the _pencil_ and _eraser_ to draw your icons. You can redraw the entire icon using the _Reset button_ or click the _Done button_ when you are satisfied with your drawing. Just a reminder: if you click the _Close button_, all your drawings will be lost without any means of restoration. 
