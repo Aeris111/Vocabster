@@ -2,6 +2,8 @@
 
 Vocabster is an English vocabulary learning application designed for kindergarten children, aiming to provide a fun experience that encourages them in the learning process.
 
+Click [here](https://aeris111.github.io/Vocabster/) to embark on your journey with Vocabster!
+
 ## Features
 ### Today's Menu 📖
 You can create your own icons here. Remember to feed Vocabster with the icons you've created.
